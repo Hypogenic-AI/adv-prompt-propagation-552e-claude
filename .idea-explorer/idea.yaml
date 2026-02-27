@@ -1,0 +1,52 @@
+idea:
+  title: Adversarial Prompt Propagation Dynamics in Multi-Agent LLM Collaborative
+    Systems
+  domain: artificial_intelligence
+  hypothesis: 'Adversarial prompt injections in multi-agent LLM systems exhibit emergent
+    propagation patterns that amplify through collaborative reasoning chains, with
+    injection persistence and mutation rates correlating positively with task complexity
+    and agent interaction frequency. The propagation dynamics follow predictable patterns
+    that can be modeled and potentially mitigated through detection mechanisms at
+    agent communication interfaces.
+
+    '
+  background:
+    description: 'While single-agent adversarial prompting is well-studied, the behavior
+      of malicious prompts in multi-agent collaborative environments remains largely
+      unexplored. As LLM agents increasingly work together on complex reasoning tasks,
+      understanding how adversarial inputs spread and evolve through agent networks
+      becomes critical for system security and reliability.
+
+      '
+  methodology:
+    approach: Simulate controlled multi-agent environments with planted adversarial
+      prompts and analyze propagation patterns across different network topologies
+      and task types.
+    steps:
+    - Create simulated multi-agent LLM environments with 3-8 agents using lightweight
+      models
+    - Design collaborative reasoning tasks of varying complexity and inject adversarial
+      prompts at different stages
+    - Track prompt mutation, persistence, and influence across agent communication
+      chains
+    - Analyze propagation patterns across different network topologies and agent roles
+    - Develop detection algorithms based on observed propagation signatures
+    metrics:
+    - Injection persistence rate across conversation turns
+    - Prompt mutation entropy and semantic drift
+    - Task completion accuracy degradation
+    - Detection algorithm precision and recall
+  constraints:
+    compute: cpu_only
+    time_limit: 3600
+  metadata:
+    tags:
+    - adversarial_ai
+    - multi_agent_systems
+    - prompt_injection
+    - ai_safety
+    idea_id: adversarial_prompt_propagation_20260227_231301_562dd06a
+    created_at: '2026-02-27T23:13:01.102860'
+    status: submitted
+    github_repo_name: adv-prompt-propagation-552e-claude
+    github_repo_url: https://github.com/Hypogenic-AI/adv-prompt-propagation-552e-claude
