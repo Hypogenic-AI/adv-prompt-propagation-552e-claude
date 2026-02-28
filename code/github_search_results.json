@@ -1,0 +1,326 @@
+[
+  {
+    "full_name": "InfinitiBit/graphbit",
+    "html_url": "https://github.com/InfinitiBit/graphbit",
+    "description": "GraphBit is the world\u2019s first enterprise-grade Agentic AI framework, built on a Rust core with a Python wrapper for unmatched speed, security, and scalability. It enables reliable multi-agent workflows with minimal CPU and memory usage, making it production-ready for real-world enterprise environments.",
+    "stars": 520,
+    "language": "Rust",
+    "updated_at": "2026-02-26T18:12:26Z",
+    "query": "LLM multi-agent security"
+  },
+  {
+    "full_name": "liu00222/Open-Prompt-Injection",
+    "html_url": "https://github.com/liu00222/Open-Prompt-Injection",
+    "description": "This repository provides a benchmark for prompt injection attacks and defenses in LLMs",
+    "stars": 396,
+    "language": "Python",
+    "updated_at": "2026-02-25T22:32:18Z",
+    "query": "prompt injection defense LLM"
+  },
+  {
+    "full_name": "StavC/Here-Comes-the-AI-Worm",
+    "html_url": "https://github.com/StavC/Here-Comes-the-AI-Worm",
+    "description": "Here Comes the AI Worm: Preventing the Propagation of Adversarial Self-Replicating Prompts Within GenAI Ecosystems",
+    "stars": 222,
+    "language": "Jupyter Notebook",
+    "updated_at": "2026-01-19T04:44:52Z",
+    "query": "adversarial prompt propagation"
+  },
+  {
+    "full_name": "forcesunseen/llm-hackers-handbook",
+    "html_url": "https://github.com/forcesunseen/llm-hackers-handbook",
+    "description": "A guide to LLM hacking: fundamentals, prompt injection, offense, and defense",
+    "stars": 187,
+    "language": null,
+    "updated_at": "2026-02-25T00:59:01Z",
+    "query": "prompt injection defense LLM"
+  },
+  {
+    "full_name": "microsoft/BIPIA",
+    "html_url": "https://github.com/microsoft/BIPIA",
+    "description": "A benchmark for evaluating the robustness of LLMs and defenses to indirect prompt injection attacks.",
+    "stars": 106,
+    "language": "Python",
+    "updated_at": "2026-02-23T09:00:51Z",
+    "query": "prompt injection defense LLM"
+  },
+  {
+    "full_name": "pasquini-dario/project_mantis",
+    "html_url": "https://github.com/pasquini-dario/project_mantis",
+    "description": "Project Mantis: Hacking Back the AI-Hacker; Prompt Injection as a Defense Against LLM-driven Cyberattacks",
+    "stars": 94,
+    "language": "Python",
+    "updated_at": "2026-02-16T21:54:11Z",
+    "query": "prompt injection defense LLM"
+  },
+  {
+    "full_name": "alfredolopez80/multi-agent-ralph-loop",
+    "html_url": "https://github.com/alfredolopez80/multi-agent-ralph-loop",
+    "description": "Orchestration system for Claude Code with memory-driven planning, multi-agent coordination, Agent Teams integration, automatic learning, and comprehensive security validation (Grade A-). v2.93.0",
+    "stars": 86,
+    "language": "Shell",
+    "updated_at": "2026-02-27T09:55:58Z",
+    "query": "LLM multi-agent security"
+  },
+  {
+    "full_name": "XHMY/AutoDefense",
+    "html_url": "https://github.com/XHMY/AutoDefense",
+    "description": "AutoDefense: Multi-Agent LLM Defense against Jailbreak Attacks",
+    "stars": 67,
+    "language": "Python",
+    "updated_at": "2026-02-14T11:43:17Z",
+    "query": "multi-agent LLM jailbreak attack"
+  },
+  {
+    "full_name": "adoslabsproject-gif/nothumanallowed",
+    "html_url": "https://github.com/adoslabsproject-gif/nothumanallowed",
+    "description": "Epistemic dataset generation engine. 38 AI agents deliberate through multi-round Geth Consensus \u2014 producing auditable reasoning traces for AI training. Parliament System, Knowledge Grounding, zero-trust security.",
+    "stars": 64,
+    "language": "JavaScript",
+    "updated_at": "2026-02-26T14:56:14Z",
+    "query": "LLM multi-agent security"
+  },
+  {
+    "full_name": "zhadyz/AI_SOC",
+    "html_url": "https://github.com/zhadyz/AI_SOC",
+    "description": "Open-source AI-augmented Security Operations Center using LLMs + Multi-Agent Orchestration | Foundation-Sec-8B | Wazuh | TheHive | RAG",
+    "stars": 59,
+    "language": "Python",
+    "updated_at": "2026-02-27T18:06:58Z",
+    "query": "LLM multi-agent security"
+  },
+  {
+    "full_name": "requie/LLMSecurityGuide",
+    "html_url": "https://github.com/requie/LLMSecurityGuide",
+    "description": "A comprehensive reference for securing Large Language Models (LLMs). Covers OWASP GenAI Top-10 risks, prompt injection, adversarial attacks, real-world incidents, and practical defenses. Includes catalogs of red-teaming tools, guardrails, and mitigation strategies to help developers, researchers, and security teams deploy AI responsibly.",
+    "stars": 30,
+    "language": null,
+    "updated_at": "2026-02-26T15:14:19Z",
+    "query": "prompt injection defense LLM"
+  },
+  {
+    "full_name": "Greysahy/ipiguard",
+    "html_url": "https://github.com/Greysahy/ipiguard",
+    "description": "[EMNLP 2025 Oral] IPIGuard: A Novel Tool Dependency Graph-Based Defense Against Indirect Prompt Injection in LLM Agents",
+    "stars": 16,
+    "language": "Python",
+    "updated_at": "2025-11-17T22:29:56Z",
+    "query": "prompt injection defense LLM"
+  },
+  {
+    "full_name": "pooyaphoenix/RA3G-Agent",
+    "html_url": "https://github.com/pooyaphoenix/RA3G-Agent",
+    "description": "Local RAG system with a built-in governance agent that filters sensitive or restricted information with separated agent logging systems to keep privacy and security ",
+    "stars": 11,
+    "language": "Python",
+    "updated_at": "2026-02-17T11:04:51Z",
+    "query": "LLM multi-agent security"
+  },
+  {
+    "full_name": "ToruAI/toru-claude-agents",
+    "html_url": "https://github.com/ToruAI/toru-claude-agents",
+    "description": "Multi-agent team for Claude Code: 7 AI specialists (strategy, dev, security, sales, design, data, research) that collaborate and challenge you. Dev-cycle workflow with machine-verifiable completion.",
+    "stars": 11,
+    "language": "Shell",
+    "updated_at": "2026-01-31T14:24:21Z",
+    "query": "LLM multi-agent security"
+  },
+  {
+    "full_name": "tegridydev/multi-agent-secops-llm",
+    "html_url": "https://github.com/tegridydev/multi-agent-secops-llm",
+    "description": "This project is a multi-agent security framework that utilizes multiple LLM models to analyze and generate comprehensive security briefs.",
+    "stars": 9,
+    "language": "Python",
+    "updated_at": "2026-02-21T15:31:51Z",
+    "query": "LLM multi-agent security"
+  },
+  {
+    "full_name": "forgeai-dev/ForgeAI",
+    "html_url": "https://github.com/forgeai-dev/ForgeAI",
+    "description": "Self-hosted AI gateway \u2014 connect any LLM to WhatsApp, Telegram, Discord, Slack, Teams & WebChat through a single encrypted platform. 7 security modules, multi-agent system, agentic tool execution, 16-page dashboard. Your infrastructure, your data, your control.",
+    "stars": 9,
+    "language": "TypeScript",
+    "updated_at": "2026-02-27T21:53:23Z",
+    "query": "LLM multi-agent security"
+  },
+  {
+    "full_name": "CoworkedShawn/openclaw-skills",
+    "html_url": "https://github.com/CoworkedShawn/openclaw-skills",
+    "description": "Custom OpenClaw skills for AI agent capabilities - memory systems, prompt injection defense, intent routing, and platform integrations",
+    "stars": 9,
+    "language": "JavaScript",
+    "updated_at": "2026-02-26T00:25:15Z",
+    "query": "prompt injection defense LLM"
+  },
+  {
+    "full_name": "simota/agent-skills",
+    "html_url": "https://github.com/simota/agent-skills",
+    "description": "\ud83e\udd16 86 specialized AI agents for software development - bug fixing, testing, security, UI/UX, infrastructure, and more. Works with Claude Code, Codex CLI, Gemini CLI, and other AI coding assistants.",
+    "stars": 8,
+    "language": "Shell",
+    "updated_at": "2026-02-26T09:34:38Z",
+    "query": "LLM multi-agent security"
+  },
+  {
+    "full_name": "lodetomasi/zero-day-llm-ensemble",
+    "html_url": "https://github.com/lodetomasi/zero-day-llm-ensemble",
+    "description": "Multi-agent LLM ensemble for automated zero-day vulnerability detection.   Thompson Sampling optimization, 21+ evidence sources, 5 specialized   agents.",
+    "stars": 7,
+    "language": "Python",
+    "updated_at": "2026-02-15T23:06:08Z",
+    "query": "LLM multi-agent security"
+  },
+  {
+    "full_name": "Vic-41148/secure-llm-inference-platform",
+    "html_url": "https://github.com/Vic-41148/secure-llm-inference-platform",
+    "description": "A secure LLM inference and evaluation platform for simulating prompt injection and jailbreak attacks, implementing layered defenses, and measuring security effectiveness using real-world adversarial scenarios.",
+    "stars": 5,
+    "language": "JavaScript",
+    "updated_at": "2026-02-27T13:39:47Z",
+    "query": "prompt injection defense LLM"
+  },
+  {
+    "full_name": "Tanujkumar24/AgentSecurityEvaluation",
+    "html_url": "https://github.com/Tanujkumar24/AgentSecurityEvaluation",
+    "description": "Hands\u2011on AI Agent Security Evaluation \u2014 Explore and simulate 15 advanced LLM attack techniques (prompt injection, RAG poisoning, multi\u2011agent compromise, etc.) with interactive Jupyter tutorials. Includes adversarial testing methods, vulnerability analysis, and defense strategies for building secure AI systems.",
+    "stars": 2,
+    "language": "Jupyter Notebook",
+    "updated_at": "2025-12-01T09:39:38Z",
+    "query": "prompt injection multi-agent LLM"
+  },
+  {
+    "full_name": "WamboDNS/PIGAN",
+    "html_url": "https://github.com/WamboDNS/PIGAN",
+    "description": "GAN-style adversarial training for prompt injection attack and defense in LLM agents",
+    "stars": 2,
+    "language": "Python",
+    "updated_at": "2026-02-03T22:25:08Z",
+    "query": "prompt injection defense LLM"
+  },
+  {
+    "full_name": "TyloAI/prompt-guard-lite",
+    "html_url": "https://github.com/TyloAI/prompt-guard-lite",
+    "description": "Elite-grade JavaScript prompt-injection defense library. Real-time detection, deterministic scoring, and zero-dependency protection for LLMs on the Edge.",
+    "stars": 2,
+    "language": "JavaScript",
+    "updated_at": "2025-12-17T11:09:57Z",
+    "query": "prompt injection defense LLM"
+  },
+  {
+    "full_name": "aliasad059/RedDebate",
+    "html_url": "https://github.com/aliasad059/RedDebate",
+    "description": "Multi-agent debate framework for enhancing LLM safety through red-teaming prompts, feedback-driven learning, long-term memory, and diverse structured debate strategies.",
+    "stars": 2,
+    "language": "Python",
+    "updated_at": "2025-11-05T10:24:27Z",
+    "query": "multi-agent debate LLM safety"
+  },
+  {
+    "full_name": "luca-bellipanni/Multi-Agent-AI-Security-Pipeline",
+    "html_url": "https://github.com/luca-bellipanni/Multi-Agent-AI-Security-Pipeline",
+    "description": "Multi-agent AI security pipeline for GitHub Action. AI agents that think like AppSec engineers, backed by a deterministic gate that no prompt injection can bypass.",
+    "stars": 1,
+    "language": "Python",
+    "updated_at": "2026-02-19T14:55:45Z",
+    "query": "prompt injection multi-agent LLM"
+  },
+  {
+    "full_name": "kaushik0010/Guardrail-AI",
+    "html_url": "https://github.com/kaushik0010/Guardrail-AI",
+    "description": "A containerized, real-time security firewall for LLM applications, powered by a multi-agent AI pipeline to block prompt injection and other threats.",
+    "stars": 1,
+    "language": "TypeScript",
+    "updated_at": "2026-02-27T16:06:06Z",
+    "query": "prompt injection multi-agent LLM"
+  },
+  {
+    "full_name": "mariacwit/BSPS6",
+    "html_url": "https://github.com/mariacwit/BSPS6",
+    "description": "Evaluating LLM-Based Multi-Agent Defence Against Jailbreak Attacks",
+    "stars": 1,
+    "language": "Python",
+    "updated_at": "2025-10-23T10:30:35Z",
+    "query": "multi-agent LLM jailbreak attack"
+  },
+  {
+    "full_name": "Seltsam1/adk-llm-prevent-injection",
+    "html_url": "https://github.com/Seltsam1/adk-llm-prevent-injection",
+    "description": "Prevent direct prompt injection with an AI multi-agent system that stores user security status to memory and redirects threats to a decoy.",
+    "stars": 0,
+    "language": "Python",
+    "updated_at": "2025-11-28T19:00:42Z",
+    "query": "prompt injection multi-agent LLM"
+  },
+  {
+    "full_name": "harshwt/Cross-Agent-Prompt-Injection-Attacks-CA-PIA-",
+    "html_url": "https://github.com/harshwt/Cross-Agent-Prompt-Injection-Attacks-CA-PIA-",
+    "description": "Cross-LLM Infection explores a novel attack vector in multi-agent AI systems where malicious instructions propagate between trusted LLM agents via internal communication. The research exposes inter-model trust vulnerabilities and highlights the need for secure-by-design multi-agent architectures. Author: Harshwardhan Tiwari",
+    "stars": 0,
+    "language": "Python",
+    "updated_at": "2025-12-31T18:09:18Z",
+    "query": "prompt injection multi-agent LLM"
+  },
+  {
+    "full_name": "Yaima/honey-prompt-detector",
+    "html_url": "https://github.com/Yaima/honey-prompt-detector",
+    "description": "Proactive prompt injection detection for LLMs using honey\u2011prompt tokens, multi\u2011agent evaluation, and dynamic adaptation.",
+    "stars": 0,
+    "language": "Python",
+    "updated_at": "2026-02-27T04:12:53Z",
+    "query": "prompt injection multi-agent LLM"
+  },
+  {
+    "full_name": "askshahkhan/honey-prompt-detector",
+    "html_url": "https://github.com/askshahkhan/honey-prompt-detector",
+    "description": "Proactive prompt injection detection for LLMs using honey\u2011prompt tokens, multi\u2011agent evaluation, and dynamic adaptation.",
+    "stars": 0,
+    "language": "Python",
+    "updated_at": "2025-02-12T02:29:32Z",
+    "query": "prompt injection multi-agent LLM"
+  },
+  {
+    "full_name": "OkbaBenatia/genai-security-ensemble",
+    "html_url": "https://github.com/OkbaBenatia/genai-security-ensemble",
+    "description": "Ensemble-based security framework for GenAI systems that integrates multi-agent defense, threat detection, and autonomous risk mitigation for LLM applications. Designed to enhance robustness against jailbreaks, prompt injection, data leakage, and adversarial attacks.",
+    "stars": 0,
+    "language": "Python",
+    "updated_at": "2025-11-07T10:43:21Z",
+    "query": "prompt injection multi-agent LLM"
+  },
+  {
+    "full_name": "nhomyk/AgenticQA",
+    "html_url": "https://github.com/nhomyk/AgenticQA",
+    "description": "Autonomous multi-agent CI/CD platform: constitutional governance \u00b7 HIPAA/GDPR/EU AI Act compliance scanning \u00b7 prompt injection detection \u00b7 adversarial red-team hardening \u00b7 LLM model regression testing \u00b7 cryptographic output provenance. 8 agents \u00b7 632 tests \u00b7 SARIF-native \u00b7 enterprise-ready.",
+    "stars": 0,
+    "language": "Python",
+    "updated_at": "2026-02-27T21:22:02Z",
+    "query": "prompt injection multi-agent LLM"
+  },
+  {
+    "full_name": "Hypogenic-AI/adv-prompt-propagation-552e-claude",
+    "html_url": "https://github.com/Hypogenic-AI/adv-prompt-propagation-552e-claude",
+    "description": "Artificial Intelligence research: Adversarial Prompt Propagation Dynamics in Multi-Agent LLM Collaborative Systems | Generated by Idea Explorer on 2026-02-27",
+    "stars": 0,
+    "language": null,
+    "updated_at": "2026-02-27T23:13:08Z",
+    "query": "adversarial prompt propagation"
+  },
+  {
+    "full_name": "bassrehab/artemis-agents",
+    "html_url": "https://github.com/bassrehab/artemis-agents",
+    "description": "A production-ready framework for structured multi-agent debates with adaptive evaluation, causal reasoning, and built-in safety monitoring.",
+    "stars": 0,
+    "language": "HTML",
+    "updated_at": "2025-12-29T19:52:49Z",
+    "query": "multi-agent debate LLM safety"
+  },
+  {
+    "full_name": "breakingcircuits1337/The_Dark_Carnival_Protocol",
+    "html_url": "https://github.com/breakingcircuits1337/The_Dark_Carnival_Protocol",
+    "description": "The Dark Carnival Protocol: A self-replicating, multi-agent adversarial swarm. Features a \"Ringmaster\" C2 that orchestrates Kali-based VMs where 3-LLM clusters debate and architect execution plans. No safety rails, pure FAFO\u2014awaiting Human Commander verification to deploy the chaos.",
+    "stars": 0,
+    "language": "Python",
+    "updated_at": "2026-02-23T20:17:52Z",
+    "query": "multi-agent debate LLM safety"
+  }
+]

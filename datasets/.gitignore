@@ -1,0 +1,18 @@
+# Ignore downloaded dataset files (can be large)
+*.parquet
+*.arrow
+*.csv
+*.tsv
+*.jsonl
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.npy
+*.npz
+*.tar.gz
+*.zip
+
+# Keep search results and README
+!dataset_search_results.json
+!README.md

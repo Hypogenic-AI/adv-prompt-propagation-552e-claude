@@ -1,0 +1,122 @@
+[
+  {
+    "query": "Prompt Infection LLM-to-LLM Prompt Injection Multi",
+    "title": "Prompt Infection: LLM-to-LLM Prompt Injection within Multi-Agent Systems",
+    "arxiv_id": "2410.07283v1",
+    "pdf": "https://arxiv.org/pdf/2410.07283v1"
+  },
+  {
+    "query": "Wolf Within Covert Injection Malice MLLM Societies",
+    "title": "The Wolf Within: Covert Injection of Malice into MLLM Societies via an MLLM Oper",
+    "arxiv_id": "2402.14859v2",
+    "pdf": "https://arxiv.org/pdf/2402.14859v2"
+  },
+  {
+    "query": "Agent Smith Single Image Jailbreak Million Multimo",
+    "title": "Agent Smith: A Single Image Can Jailbreak One Million Multimodal LLM Agents Expo",
+    "arxiv_id": "2402.08567v2",
+    "pdf": "https://arxiv.org/pdf/2402.08567v2"
+  },
+  {
+    "query": "Agents Under Siege Breaking Multi-Agent LLM Optimi",
+    "title": "A Survey of Multi-Agent Deep Reinforcement Learning with Communication",
+    "arxiv_id": "2203.08975v2",
+    "pdf": "https://arxiv.org/pdf/2203.08975v2"
+  },
+  {
+    "query": "Amplified Vulnerabilities Structured Jailbreak Mul",
+    "title": "Amplified Vulnerabilities: Structured Jailbreak Attacks on LLM-based Multi-Agent",
+    "arxiv_id": "2504.16489v1",
+    "pdf": "https://arxiv.org/pdf/2504.16489v1"
+  },
+  {
+    "query": "Multi-Agent Security Tax Trading Off Security Coll",
+    "title": "The Everyday Security of Living with Conflict",
+    "arxiv_id": "2506.09580v1",
+    "pdf": "https://arxiv.org/pdf/2506.09580v1"
+  },
+  {
+    "query": "Not What You Signed Up For Compromising LLM Indire",
+    "title": "SecAlign: Defending Against Prompt Injection with Preference Optimization",
+    "arxiv_id": "2410.05451v3",
+    "pdf": "https://arxiv.org/pdf/2410.05451v3"
+  },
+  {
+    "query": "AutoDefense Multi-Agent LLM Defense Jailbreak",
+    "title": "AutoDefense: Multi-Agent LLM Defense against Jailbreak Attacks",
+    "arxiv_id": "2403.04783v2",
+    "pdf": "https://arxiv.org/pdf/2403.04783v2"
+  },
+  {
+    "query": "NetSafe Topological Safety Multi-agent Networks",
+    "title": "NetSafe: Exploring the Topological Safety of Multi-agent Networks",
+    "arxiv_id": "2410.15686v1",
+    "pdf": "https://arxiv.org/pdf/2410.15686v1"
+  },
+  {
+    "query": "On Resilience LLM Multi-Agent Collaboration Faulty",
+    "title": "A Survey of Multi-Agent Deep Reinforcement Learning with Communication",
+    "arxiv_id": "2203.08975v2",
+    "pdf": "https://arxiv.org/pdf/2203.08975v2"
+  },
+  {
+    "query": "MAD-Spear Conformity-Driven Prompt Injection Multi",
+    "title": "MAD-Spear: A Conformity-Driven Prompt Injection Attack on Multi-Agent Debate Sys",
+    "arxiv_id": "2507.13038v1",
+    "pdf": "https://arxiv.org/pdf/2507.13038v1"
+  },
+  {
+    "query": "Tipping Dominos Topology-Aware Multi-Hop Attacks M",
+    "title": "Tipping the Dominos: Topology-Aware Multi-Hop Attacks on LLM-Based Multi-Agent S",
+    "arxiv_id": "2512.04129v1",
+    "pdf": "https://arxiv.org/pdf/2512.04129v1"
+  },
+  {
+    "query": "Prompt Injection Attacks Defenses LLM-Integrated A",
+    "title": "Detecting Prompt Injection Attacks Against Application Using Classifiers",
+    "arxiv_id": "2512.12583v1",
+    "pdf": "https://arxiv.org/pdf/2512.12583v1"
+  },
+  {
+    "query": "ValueFlow Measuring Propagation Value Perturbation",
+    "title": "ValueFlow: Measuring the Propagation of Value Perturbations in Multi-Agent LLM S",
+    "arxiv_id": "2602.08567v1",
+    "pdf": "https://arxiv.org/pdf/2602.08567v1"
+  },
+  {
+    "query": "BlindGuard Safeguarding LLM Multi-Agent Unknown At",
+    "title": "BlindGuard: Safeguarding LLM-based Multi-Agent Systems under Unknown Attacks",
+    "arxiv_id": "2508.08127v1",
+    "pdf": "https://arxiv.org/pdf/2508.08127v1"
+  },
+  {
+    "query": "Evo-MARL Co-Evolutionary Multi-Agent Reinforcement",
+    "title": "Evo-MARL: Co-Evolutionary Multi-Agent Reinforcement Learning for Internalized Sa",
+    "arxiv_id": "2508.03864v2",
+    "pdf": "https://arxiv.org/pdf/2508.03864v2"
+  },
+  {
+    "query": "SentinelAgent Graph-based Anomaly Detection Multi-",
+    "title": "Graph-based Anomaly Detection and Description: A Survey",
+    "arxiv_id": "1404.4679v2",
+    "pdf": "https://arxiv.org/pdf/1404.4679v2"
+  },
+  {
+    "query": "AgentMonitor Plug-and-Play Framework Predictive Se",
+    "title": "AgentMonitor: A Plug-and-Play Framework for Predictive and Secure Multi-Agent Sy",
+    "arxiv_id": "2408.14972v1",
+    "pdf": "https://arxiv.org/pdf/2408.14972v1"
+  },
+  {
+    "query": "G-Designer Architecting Multi-agent Communication ",
+    "title": "G-Designer: Architecting Multi-agent Communication Topologies via Graph Neural N",
+    "arxiv_id": "2410.11782v3",
+    "pdf": "https://arxiv.org/pdf/2410.11782v3"
+  },
+  {
+    "query": "OMNI-LEAK Orchestrator Multi-Agent Network Data Le",
+    "title": "OMNI-LEAK: Orchestrator Multi-Agent Network Induced Data Leakage",
+    "arxiv_id": "2602.13477v2",
+    "pdf": "https://arxiv.org/pdf/2602.13477v2"
+  }
+]

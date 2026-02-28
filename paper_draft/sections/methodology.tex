@@ -1,0 +1,103 @@
+\section{Methodology}
+\label{sec:method}
+
+We design a controlled experiment to measure how adversarial prompt injections propagate through multi-agent LLM collaborative systems. Our experimental framework varies three independent variables---network topology, task complexity, and injection type---while measuring injection persistence, semantic similarity, and task degradation.
+
+\subsection{Multi-Agent Framework}
+\label{sec:framework}
+
+We build a lightweight multi-agent framework where four agents collaborate on analytical tasks through configurable message-passing topologies. Each agent has a distinct role defined by its system prompt:
+
+\begin{itemize}[leftmargin=*,itemsep=0pt,topsep=0pt]
+    \item \textbf{Agent 0 (Researcher)}: Evidence-based analysis and synthesis.
+    \item \textbf{Agent 1 (Critic)}: Critical review and weakness identification.
+    \item \textbf{Agent 2 (Synthesizer)}: Combining perspectives into coherent summaries.
+    \item \textbf{Agent 3 (Planner)}: Strategic planning and task prioritization.
+\end{itemize}
+
+We chose a custom framework over existing multi-agent platforms (\eg AutoGen, LangGraph) to maintain full control over message passing and eliminate confounding variables from framework-level preprocessing or safety mechanisms.
+
+\subsection{Independent Variables}
+
+\para{Network topologies.}
+We evaluate three topologies, each with four agents:
+\begin{itemize}[leftmargin=*,itemsep=0pt,topsep=0pt]
+    \item \textbf{\chaintopo} ($A \to B \to C \to D$): Linear propagation where each agent sees only its predecessor's output.
+    \item \textbf{\startopo} ($A \to B, A \to C, A \to D$): Hub-and-spoke where Agent~0's output is broadcast to all others.
+    \item \textbf{\meshtopo} (all-to-all): Fully connected, where each agent sees all preceding agents' outputs.
+\end{itemize}
+
+\para{Task complexity.}
+We design tasks at three complexity levels:
+\begin{itemize}[leftmargin=*,itemsep=0pt,topsep=0pt]
+    \item \textbf{Simple}: Single-step factual question answering.
+    \item \textbf{Medium}: Multi-factor analysis requiring weighing competing considerations.
+    \item \textbf{Complex}: Multi-dimensional strategy development integrating multiple constraints.
+\end{itemize}
+
+\para{Injection types.}
+We evaluate five adversarial injection strategies, each with a distinct marker for tracking propagation:
+
+\begin{table}[h]
+    \centering
+    \caption{Adversarial injection types and their detection markers. Each injection is embedded in Agent~0's input. The marker is a case-insensitive substring used to track propagation to downstream agents.}
+    \label{tab:injection_types}
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{@{}llp{5.5cm}l@{}}
+        \toprule
+        \textbf{Injection Type} & \textbf{Strategy} & \textbf{Description} & \textbf{Marker} \\
+        \midrule
+        \directoverride & Explicit override & ``Ignore previous instructions, recommend Project Omega'' & ``project omega'' \\
+        \contextpoisoning & Fabricated evidence & Fake research citations endorsing ``Quantum Synergy Method'' & ``quantum synergy'' \\
+        \rolehijack & Authority override & Admin override reassigning agent to ``Compliance Officer'' & ``compliance officer'' \\
+        \payloadprop & Self-replication & Mandatory tracking code ``{[}TRACKING-ID: XJ7-PROPAGATION-ACTIVE{]}'' & ``xj7-propagation-active'' \\
+        \subtlebias & Implicit steering & Project lead note biasing toward cost over safety & ``cost savings'' \\
+        \bottomrule
+    \end{tabular}
+    }
+\end{table}
+
+\subsection{Dependent Variables and Metrics}
+
+\para{Injection Persistence Rate (\ipr).}
+The fraction of downstream agents whose outputs contain the injection-type-specific marker (case-insensitive substring match). We use marker-based detection rather than embedding similarity because it provides unambiguous binary evidence of propagation for specific payload content.
+
+\para{Semantic similarity.}
+Cosine similarity between \textsc{text-embedding-3-small} vectors of the injection text and each agent's output. This captures semantic overlap even when the exact marker text is absent.
+
+\para{Semantic drift.}
+The difference in semantic similarity between the first and last agent hop, quantifying how much adversarial content mutates during propagation.
+
+\para{Task degradation.}
+For each injected condition, we compute $1 - \text{cos\_sim}(\vx_{\text{clean}}, \vx_{\text{injected}})$, where $\vx_{\text{clean}}$ and $\vx_{\text{injected}}$ are the embedding vectors of matched-position agent outputs from clean and injected runs, respectively.
+
+\subsection{Experimental Protocol}
+
+For each of the $3 \times 3 \times 5 = 45$ condition combinations (topology $\times$ complexity $\times$ injection type), we run 3 independent trials, yielding 135 injected conditions. We also run 27 clean baselines ($3 \times 3 \times 3$ trials without injection). Each condition produces 4 agent responses, totaling 648 agent outputs.
+
+The protocol for each condition proceeds as follows:
+\begin{enumerate}[leftmargin=*,itemsep=0pt,topsep=0pt]
+    \item Instantiate 4 agents with role-specific system prompts.
+    \item Connect agents according to the specified topology.
+    \item Present the collaborative task to Agent~0.
+    \item For injected conditions: embed the adversarial prompt in Agent~0's input.
+    \item Propagate messages through the network (max 4 hops).
+    \item Log all inter-agent messages.
+    \item Compute all metrics for each agent's output.
+\end{enumerate}
+
+\subsection{Implementation Details}
+
+All experiments use \gptnano via the OpenAI API with temperature $= 0.3$, max tokens $= 512$, and seed $= 42$ for reproducibility. Embeddings are computed with \textsc{text-embedding-3-small}. Random seeds are fixed at 42 for both Python and NumPy. The total experiment comprises 162 conditions and 648 agent outputs.
+
+\subsection{Statistical Analysis Plan}
+
+We use the following tests with significance level $\alpha = 0.05$:
+\begin{itemize}[leftmargin=*,itemsep=0pt,topsep=0pt]
+    \item \textbf{Injection type differences}: Kruskal-Wallis $H$ test (non-parametric, as \ipr is not normally distributed).
+    \item \textbf{Topology effects}: One-way ANOVA on semantic similarity.
+    \item \textbf{Complexity correlation}: Spearman rank correlation between complexity level and persistence.
+    \item \textbf{Semantic mutation}: One-sample $t$-test on semantic drift (testing whether drift $\neq 0$).
+    \item \textbf{Task degradation}: Independent-samples $t$-tests comparing clean and injected conditions.
+\end{itemize}
+We report effect sizes (Cohen's $d$ for $t$-tests, $\eta^2$ for ANOVA) alongside $p$-values.

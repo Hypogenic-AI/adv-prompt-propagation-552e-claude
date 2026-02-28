@@ -1,0 +1,54 @@
+{
+  "status": "complete",
+  "topic": "Adversarial Prompt Propagation Dynamics in Multi-Agent LLM Collaborative Systems",
+  "hypothesis": "Adversarial prompt injections in multi-agent LLM systems exhibit emergent propagation patterns that amplify through collaborative reasoning chains, with injection persistence and mutation rates correlating positively with task complexity and agent interaction frequency.",
+  "domain": "artificial_intelligence",
+  "summary": {
+    "papers_downloaded": 17,
+    "papers_deep_read": 7,
+    "papers_chunked": 7,
+    "datasets_found": 75,
+    "datasets_recommended": 10,
+    "code_repos_cloned": 11,
+    "paper_search_queries": 3,
+    "total_papers_found_in_search": 645,
+    "high_relevance_papers": 27
+  },
+  "deliverables": {
+    "literature_review": "literature_review.md",
+    "resources_catalog": "resources.md",
+    "papers_directory": "papers/",
+    "papers_readme": "papers/README.md",
+    "paper_chunks": "papers/pages/",
+    "datasets_directory": "datasets/",
+    "datasets_readme": "datasets/README.md",
+    "datasets_search_results": "datasets/dataset_search_results.json",
+    "code_directory": "code/",
+    "code_readme": "code/README.md",
+    "code_search_results": "code/github_search_results.json",
+    "arxiv_ids": "arxiv_ids.json",
+    "paper_search_results": "paper_search_results/"
+  },
+  "key_papers": [
+    "2410.07283 - Prompt Infection: Self-replicating LLM-to-LLM injection (logistic growth model)",
+    "2402.08567 - Agent Smith: Infectious jailbreak via adversarial images (SIR model, 1M agents in 27-31 rounds)",
+    "2512.04129 - Tipping the Dominos: TOMA topology-aware multi-hop attack (40-78% ASR, T-Guard 94.8% defense)",
+    "2602.08567 - ValueFlow: β-susceptibility and System Susceptibility metrics for value propagation",
+    "2504.16489 - Amplified Vulnerabilities: MAD jailbreak amplification (28% to 80% ASR, 185% increase)",
+    "2507.13038 - MAD-Spear: Conformity-driven Sybil attack on multi-agent debate",
+    "2602.13477 - OMNI-LEAK: Data leakage through orchestrator multi-agent networks"
+  ],
+  "key_repos": [
+    "sail-sg/Agent-Smith (118 stars) - ICML 2024 infectious jailbreak",
+    "XHMY/AutoDefense (67 stars) - Multi-agent LLM defense",
+    "microsoft/BIPIA - Indirect prompt injection benchmark",
+    "StavC/Here-Comes-the-AI-Worm - AI worm propagation",
+    "Greysahy/ipiguard (16 stars) - EMNLP 2025 tool-graph defense"
+  ],
+  "key_datasets": [
+    "JailbreakBench/JBB-Behaviors (16,972 downloads) - NeurIPS 2024 jailbreak benchmark",
+    "walledai/AdvBench (10,170 downloads) - Harmful behaviors/strings",
+    "deepset/prompt-injections (6,183 downloads) - Binary injection classification",
+    "xTRam1/safe-guard-prompt-injection (1,573 downloads) - Large injection dataset"
+  ]
+}

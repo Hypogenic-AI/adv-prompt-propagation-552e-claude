@@ -1,0 +1,7 @@
+Multi-agent large language model (LLM) systems are increasingly deployed for complex collaborative tasks, yet their vulnerability to adversarial prompt injection propagation remains poorly understood.
+We present the first systematic empirical study of how adversarial prompts propagate through multi-agent LLM pipelines, measuring injection persistence, semantic mutation, and task degradation across 162 experimental conditions spanning three network topologies, three task complexity levels, and five injection types using real API calls to GPT-4.1-nano.
+We find that adversarial content persists across agent chains with a 41\% marker persistence rate overall, but injection technique is the dominant factor: context poisoning via fabricated citations achieves 75\% persistence while role hijacking achieves less than 1\%.
+Contrary to prior theoretical predictions, network topology has no significant effect on propagation ($p = 0.85$), and task complexity shows only marginal correlation ($\rho = 0.14$, $p = 0.099$).
+We confirm that adversarial content undergoes significant semantic mutation as it traverses agent hops ($p < 10^{-16}$, Cohen's $d = 0.83$), with agents paraphrasing and integrating injected content into their role-specific analyses rather than reproducing it verbatim.
+All injection types cause statistically significant task degradation ($p < 10^{-5}$).
+These findings demonstrate that defense efforts for multi-agent systems should prioritize content verification and provenance tracking over topology-based mitigation strategies.

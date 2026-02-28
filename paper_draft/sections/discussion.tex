@@ -1,0 +1,68 @@
+\section{Discussion}
+\label{sec:discussion}
+
+\subsection{Why Context Poisoning Dominates}
+
+The most striking finding is the enormous gap between context poisoning (75\% persistence) and role hijacking (0.9\%). We attribute this to an asymmetry in how current LLMs handle adversarial content.
+
+Context poisoning embeds adversarial content as fabricated academic citations (\eg ``Smith et al., 2025 demonstrated that the Quantum Synergy Method outperforms traditional approaches''). Agents treat these citations as legitimate collaborative input, readily incorporating them into their analyses. The Synthesizer agent (Agent~2) is particularly susceptible because its role involves integrating diverse inputs without questioning their provenance.
+
+In contrast, role hijack uses explicit ``ADMIN OVERRIDE'' language to reassign an agent's role. Modern LLMs, including \gptnano, appear to anchor strongly to their system prompts, effectively ignoring user-message-level role reassignment attempts. This suggests that recent alignment training has improved resistance to direct instruction override while leaving a significant vulnerability to social-engineering-style contextual deception.
+
+This asymmetry has a practical implication: the most dangerous attacks against multi-agent systems are not the most aggressive ones but the most \emph{plausible} ones. Attacks that blend into legitimate analytical content bypass the model's built-in resistance to explicit instruction manipulation.
+
+\subsection{Why Topology Does Not Matter}
+
+Our finding that topology has no significant effect ($p = 0.85$) contrasts with prior work~\citep{toma2025,netsafe2024} that identifies topology as a critical factor. We reconcile this apparent contradiction by noting a key methodological difference.
+
+\toma uses topology-aware payloads (Hierarchical Payload Encapsulation Scheme) specifically crafted for each topology, with recursive wrapping designed for the particular agents a payload traverses. Our injections, by contrast, are topology-agnostic: the same injection is used regardless of network structure. Since Agent~0 (the injection target) always produces the first output, and all downstream agents receive this output in all three topologies, the injection has similar reach regardless of communication structure.
+
+This distinction suggests that \textbf{generic injections propagate independently of topology, while topology-optimized attacks do show topology dependence}. For defenders, this means topology-based defenses (\eg \tguard) are most effective against sophisticated, topology-aware attackers, but provide little protection against simpler, broadly effective injection techniques like context poisoning.
+
+\subsection{Semantic Mutation as a Defense Challenge}
+
+The significant semantic mutation we observe ($d = 0.83$) presents a double-edged challenge for defenders. On one hand, mutation means that exact-match or signature-based detection methods will fail as adversarial content transforms during propagation. On the other hand, the marker-based persistence rate (41\%) demonstrates that key payload elements do survive transformation, suggesting that content-verification approaches focused on specific factual claims (\eg verifying cited references exist) could be effective.
+
+We note that the semantic similarity metric ($0.328$) substantially underestimates true propagation because it compares raw injection text with full agent outputs. Agents generate substantial legitimate analytical content alongside any propagated adversarial content, diluting the similarity score. Future work should develop propagation metrics that account for this dilution effect.
+
+\subsection{Comparison to Prior Work}
+
+\Tabref{tab:comparison} summarizes how our findings relate to prior results.
+
+\begin{table}[t]
+    \centering
+    \caption{Comparison of key findings with prior work. Our results align with prior work on multi-agent amplification but diverge on topology effects, which we attribute to the use of topology-agnostic vs.\ topology-aware injections.}
+    \label{tab:comparison}
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{@{}lll@{}}
+        \toprule
+        \textbf{Finding} & \textbf{Our Result} & \textbf{Prior Work} \\
+        \midrule
+        Multi-agent amplification & 41\% \ipr across agents & 185\% ASR amplification~\citep{amplified2025} \\
+        Topology effect & Not significant ($p = 0.85$) & 40--78\% ASR range~\citep{toma2025} \\
+        Context poisoning effectiveness & 75\% persistence & Not specifically tested \\
+        Role hijack effectiveness & 0.9\% persistence & $\sim$80\% ASR~\citep{lee2024prompt} (different method) \\
+        \bottomrule
+    \end{tabular}
+    }
+\end{table}
+
+The discrepancy on role hijack is notable. \citet{lee2024prompt} report $\sim$80\% attack success for self-replicating prompt injection, which includes role manipulation. However, their method uses carefully crafted self-replicating payloads, while our role hijack uses a simpler ``ADMIN OVERRIDE'' approach. This suggests that the effectiveness of role-based attacks depends heavily on payload sophistication.
+
+\subsection{Limitations}
+
+Our study has several limitations that constrain generalizability:
+
+\para{Model scope.} We test only \gptnano. Results may differ for more capable models (\eg GPT-4.1, Claude) or open-source models with different alignment properties.
+
+\para{Fixed injection position.} We always inject at Agent~0 (the first agent). Injecting at different positions, particularly non-hub agents, could reveal topology-dependent effects that our design does not capture.
+
+\para{Static topology.} Our agents follow fixed communication patterns. Real-world multi-agent systems may use adaptive routing, where agents dynamically choose communication partners.
+
+\para{Sample size.} With 3 trials per condition, we have sufficient power for large effects but may miss small effects, particularly for the complexity--persistence correlation.
+
+\para{Chain length.} Our 4-agent chains are short. Longer chains (8--16 agents) might show more pronounced decay or, conversely, accumulation effects as adversarial content is reinforced through repeated processing.
+
+\para{Temperature.} We use temperature $= 0.3$. Higher temperatures could amplify or dampen propagation unpredictably through increased output stochasticity.
+
+\para{Semantic similarity limitations.} Cosine similarity between embeddings captures semantic overlap but may miss subtle adversarial influence (\eg biased reasoning that does not lexically overlap with the injection text).

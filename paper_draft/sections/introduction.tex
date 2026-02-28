@@ -1,0 +1,19 @@
+\section{Introduction}
+\label{sec:introduction}
+
+Multi-agent LLM systems---where multiple language model instances collaborate through structured message passing to solve complex tasks---are rapidly moving from research prototypes to production deployments. These systems power collaborative coding assistants, research synthesis pipelines, and autonomous decision-support tools~\citep{greshake2023indirect,liu2023prompt}. A critical but underexplored question is: what happens when one agent in such a system is compromised by an adversarial prompt injection?
+
+A single compromised agent can potentially corrupt an entire collaborative pipeline. Prior work has shown that adversarial prompts can self-replicate across agent populations~\citep{lee2024prompt}, that multi-agent debate amplifies jailbreak success by 185\%~\citep{amplified2025}, and that network topology affects attack success rates in simulated settings~\citep{toma2025}. However, no study has systematically measured how adversarial content \emph{semantically mutates} as it propagates through real LLM agent chains, whether network topology genuinely affects propagation dynamics with real model outputs, or how different injection techniques compare in their propagation effectiveness.
+
+We address this gap with the first controlled empirical study of adversarial prompt propagation dynamics in multi-agent LLM systems using real API calls. We build a lightweight multi-agent framework where four agents with distinct roles (researcher, critic, synthesizer, planner) collaborate on analytical tasks across three topologies (\chaintopo, \startopo, \meshtopo), three complexity levels, and five injection types. Across 162 experimental conditions with \gptnano, we track injection persistence, semantic drift, and task degradation at every agent hop.
+
+Our results reveal a striking finding: \textbf{injection technique, not network topology, is the dominant factor governing adversarial propagation}. Context poisoning via fabricated academic citations achieves 75\% marker persistence across agents, while direct instruction override reaches 67\% and role hijacking achieves less than 1\%---a range spanning two orders of magnitude ($H = 101.35$, $p < 10^{-20}$). Meanwhile, topology produces no significant differences (ANOVA $F = 0.16$, $p = 0.85$). We also confirm that adversarial content undergoes significant semantic mutation ($p < 10^{-16}$, $d = 0.83$), with agents paraphrasing and integrating injections into their role-specific analyses. All injection types cause measurable task degradation of 10--14\% ($p < 10^{-5}$).
+
+In summary, we make the following contributions:
+\begin{itemize}[leftmargin=*,itemsep=0pt,topsep=0pt]
+    \item We conduct the first systematic empirical study of adversarial prompt propagation in multi-agent LLM systems using real API calls across 162 conditions, measuring injection persistence, semantic mutation, and task degradation.
+    \item We demonstrate that injection technique is the dominant factor in propagation dynamics, with context poisoning achieving 75\% persistence while role hijacking achieves less than 1\%, and that network topology has no significant effect ($p = 0.85$) for topology-agnostic injections.
+    \item We quantify semantic mutation during propagation, showing that adversarial content is systematically paraphrased and integrated rather than reproduced verbatim, with implications for detection algorithm design.
+\end{itemize}
+
+The paper proceeds as follows. \Secref{sec:related} reviews related work on prompt injection attacks and multi-agent security. \Secref{sec:method} describes our experimental methodology. \Secref{sec:results} presents our findings, and \secref{sec:discussion} discusses implications and limitations. \Secref{sec:conclusion} concludes.

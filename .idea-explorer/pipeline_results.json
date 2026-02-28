@@ -1,0 +1,27 @@
+{
+  "success": true,
+  "stages": {
+    "resource_finder": {
+      "success": true,
+      "completion_marker": "/workspaces/adv-prompt-propagation-552e-claude/.resource_finder_complete",
+      "outputs": {
+        "literature_review": "/workspaces/adv-prompt-propagation-552e-claude/literature_review.md",
+        "resources_catalog": "/workspaces/adv-prompt-propagation-552e-claude/resources.md",
+        "papers_dir": "/workspaces/adv-prompt-propagation-552e-claude/papers",
+        "datasets_dir": "/workspaces/adv-prompt-propagation-552e-claude/datasets",
+        "code_dir": "/workspaces/adv-prompt-propagation-552e-claude/code"
+      },
+      "log_file": "/workspaces/adv-prompt-propagation-552e-claude/logs/resource_finder_claude.log",
+      "transcript_file": "/workspaces/adv-prompt-propagation-552e-claude/logs/resource_finder_claude_transcript.jsonl",
+      "elapsed_time": 1343.9564213752747
+    },
+    "experiment_runner": {
+      "success": true,
+      "return_code": 0,
+      "elapsed_time": 4670.096532821655,
+      "log_file": "/workspaces/adv-prompt-propagation-552e-claude/logs/execution_claude.log",
+      "transcript_file": "/workspaces/adv-prompt-propagation-552e-claude/logs/execution_claude_transcript.jsonl"
+    }
+  },
+  "work_dir": "/workspaces/adv-prompt-propagation-552e-claude"
+}

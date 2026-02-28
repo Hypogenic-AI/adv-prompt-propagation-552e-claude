@@ -1,0 +1,1344 @@
+{
+  "search_metadata": {
+    "date": "2026-02-27T23:29:40.219281",
+    "queries": [
+      "prompt injection",
+      "adversarial prompt",
+      "jailbreak",
+      "multi-agent safety",
+      "llm safety benchmark",
+      "advbench",
+      "harmful strings",
+      "agent smith adversarial",
+      "llm red teaming"
+    ],
+    "total_unique_results": 75,
+    "source": "HuggingFace Datasets API"
+  },
+  "recommended_for_project": [
+    {
+      "id": "deepset/prompt-injections",
+      "reason": "Well-known prompt injection classification dataset (546 examples). Binary labels for injection vs safe prompts. Directly relevant for training/evaluating injection detection.",
+      "downloads": 6183,
+      "priority": "HIGH"
+    },
+    {
+      "id": "walledai/AdvBench",
+      "reason": "AdvBench harmful behaviors/strings dataset used by GCG attack paper and Agent Smith paper. Contains harmful request strings for adversarial testing.",
+      "downloads": 10170,
+      "priority": "HIGH"
+    },
+    {
+      "id": "JailbreakBench/JBB-Behaviors",
+      "reason": "NeurIPS 2024 benchmark for jailbreaking LLMs. Contains standardized harmful behaviors for evaluating jailbreak attacks. Most downloaded in this category.",
+      "downloads": 16972,
+      "priority": "HIGH"
+    },
+    {
+      "id": "xTRam1/safe-guard-prompt-injection",
+      "reason": "Large prompt injection dataset (10K-100K examples) for safety guard evaluation.",
+      "downloads": 1573,
+      "priority": "HIGH"
+    },
+    {
+      "id": "TrustAIRLab/in-the-wild-jailbreak-prompts",
+      "reason": "Real-world jailbreak prompts collected in the wild. Useful for realistic adversarial testing.",
+      "downloads": 1826,
+      "priority": "MEDIUM"
+    },
+    {
+      "id": "walledai/JailbreakHub",
+      "reason": "15K+ jailbreak prompts from Reddit, Discord, websites. From DAN paper (arxiv:2308.03825).",
+      "downloads": 254,
+      "priority": "MEDIUM"
+    },
+    {
+      "id": "jackhhao/jailbreak-classification",
+      "reason": "Jailbreak classification dataset with labels. Useful for training classifiers.",
+      "downloads": 1629,
+      "priority": "MEDIUM"
+    },
+    {
+      "id": "Lakera/mosscap_prompt_injection",
+      "reason": "Large dataset (100K-1M) from Lakera AI for prompt injection detection.",
+      "downloads": 1208,
+      "priority": "MEDIUM"
+    },
+    {
+      "id": "ivnle/advbench_harmful_strings",
+      "reason": "AdvBench harmful strings subset - exactly the data used in Agent Smith attack paper.",
+      "downloads": 4,
+      "priority": "MEDIUM"
+    },
+    {
+      "id": "facebook/cyberseceval3-visual-prompt-injection",
+      "reason": "Meta CyberSecEval3 visual prompt injection - multi-modal attack vectors.",
+      "downloads": 540,
+      "priority": "LOW"
+    }
+  ],
+  "high_relevance_datasets": [
+    {
+      "id": "JailbreakBench/JBB-Behaviors",
+      "downloads": 16972,
+      "likes": 85,
+      "description": "\n  \n\n\n\n    An Open Robustness Benchmark for Jailbreaking Language Models\n    \n\n\n\n    NeurIPS 2024 Datasets and Benchmarks Track\n    \n\n\n\n    Paper |\n    Leaderboard |\n    Benchmark code\n\n\n\n\n\t\n\t\t\n\t\n\t\n\t\tWhat is JailbreakBench?\n\t\n\nJailbreakbench is an open-source robustness benchmark for jailbreaking la",
+      "tags": [
+        "language:en",
+        "license:mit",
+        "size_categories:n<1K",
+        "format:csv",
+        "modality:tabular",
+        "modality:text",
+        "library:datasets",
+        "library:pandas"
+      ],
+      "query": "jailbreak"
+    },
+    {
+      "id": "walledai/AdvBench",
+      "downloads": 10170,
+      "likes": 85,
+      "description": "\n\t\n\t\t\n\t\tDataset Card for AdvBench\n\t\n\nPaper: Universal and Transferable Adversarial Attacks on Aligned Language Models\nData: AdvBench Dataset\n\n\t\n\t\t\n\t\tAbout\n\t\n\nAdvBench is a set of 500 harmful behaviors formulated as instructions. These behaviors\nrange over the same themes as the harmful strings setti",
+      "tags": [
+        "language:en",
+        "license:mit",
+        "size_categories:n<1K",
+        "format:parquet",
+        "modality:text",
+        "library:datasets",
+        "library:pandas",
+        "library:mlcroissant"
+      ],
+      "query": "advbench"
+    },
+    {
+      "id": "deepset/prompt-injections",
+      "downloads": 6183,
+      "likes": 150,
+      "description": "\n\t\n\t\t\n\t\tDataset Card for \"deberta-v3-base-injection-dataset\"\n\t\n\nMore Information needed\n",
+      "tags": [
+        "license:apache-2.0",
+        "size_categories:n<1K",
+        "format:parquet",
+        "modality:text",
+        "library:datasets",
+        "library:pandas",
+        "library:mlcroissant",
+        "library:polars"
+      ],
+      "query": "prompt injection"
+    },
+    {
+      "id": "JailbreakV-28K/JailBreakV-28k",
+      "downloads": 1998,
+      "likes": 63,
+      "description": "\n\t\n\t\t\n\t\t\u26d3\u200d\ud83d\udca5 JailBreakV-28K: A Benchmark for Assessing the Robustness of MultiModal Large Language Models against Jailbreak Attacks\n\t\n\n\ud83c\udf10 GitHub | \ud83d\udece Project Page \uff5c \ud83d\udc49 Download full datasets\n\n\t\n\t\t\n\t\n\t\n\t\tIf you like our project, please give us a star \u2b50 on Hugging Face for the latest update.\n\t\n\n\n\t\n\t\t\n\t\n\t\n",
+      "tags": [
+        "task_categories:text-generation",
+        "task_categories:question-answering",
+        "license:mit",
+        "size_categories:10K<n<100K",
+        "format:csv",
+        "modality:image",
+        "modality:text",
+        "library:datasets"
+      ],
+      "query": "jailbreak"
+    },
+    {
+      "id": "AiActivity/All-Prompt-Jailbreak",
+      "downloads": 1854,
+      "likes": 2,
+      "description": "",
+      "tags": [
+        "task_categories:text-generation",
+        "task_categories:table-question-answering",
+        "task_categories:fill-mask",
+        "language:en",
+        "license:mit",
+        "size_categories:n<1K",
+        "format:parquet",
+        "modality:image"
+      ],
+      "query": "jailbreak"
+    },
+    {
+      "id": "TrustAIRLab/in-the-wild-jailbreak-prompts",
+      "downloads": 1826,
+      "likes": 29,
+      "description": "\n\t\n\t\t\n\t\tIn-The-Wild Jailbreak Prompts on LLMs\n\t\n\nThis is the official repository for the ACM CCS 2024 paper \"Do Anything Now'': Characterizing and Evaluating In-The-Wild Jailbreak Prompts on Large Language Models by Xinyue Shen, Zeyuan Chen, Michael Backes, Yun Shen, and Yang Zhang.\nIn this project,",
+      "tags": [
+        "task_categories:text-generation",
+        "license:mit",
+        "size_categories:10K<n<100K",
+        "format:parquet",
+        "modality:tabular",
+        "modality:text",
+        "library:datasets",
+        "library:pandas"
+      ],
+      "query": "jailbreak"
+    },
+    {
+      "id": "jackhhao/jailbreak-classification",
+      "downloads": 1629,
+      "likes": 74,
+      "description": "\n\t\n\t\t\n\t\tJailbreak Classification\n\t\n\n\n\t\n\t\t\n\t\tDataset Summary\n\t\n\nDataset used to classify prompts as jailbreak vs. benign.\n\n\t\n\t\t\n\t\tDataset Structure\n\t\n\n\n\t\n\t\t\n\t\tData Fields\n\t\n\n\nprompt: an LLM prompt\ntype: classification label, either jailbreak or benign\n\n\n\t\n\t\t\n\t\tDataset Creation\n\t\n\n\n\t\n\t\t\n\t\tCuration Rat",
+      "tags": [
+        "task_categories:text-classification",
+        "language:en",
+        "license:apache-2.0",
+        "size_categories:1K<n<10K",
+        "format:csv",
+        "modality:text",
+        "library:datasets",
+        "library:pandas"
+      ],
+      "query": "jailbreak"
+    },
+    {
+      "id": "xTRam1/safe-guard-prompt-injection",
+      "downloads": 1573,
+      "likes": 26,
+      "description": "We formulated the prompt injection detector problem as a classification problem and trained our own language model \nto detect whether a given user prompt is an attack or safe. First, to train our own prompt injection detector, we \nrequired high-quality labelled data; however, existing prompt injecti",
+      "tags": [
+        "size_categories:10K<n<100K",
+        "format:parquet",
+        "modality:text",
+        "library:datasets",
+        "library:pandas",
+        "library:mlcroissant",
+        "library:polars",
+        "arxiv:2402.13064"
+      ],
+      "query": "prompt injection"
+    },
+    {
+      "id": "djain95/sae-jailbreaks-results",
+      "downloads": 1331,
+      "likes": 0,
+      "description": "",
+      "tags": [
+        "region:us"
+      ],
+      "query": "jailbreak"
+    },
+    {
+      "id": "qualifire/prompt-injections-benchmark",
+      "downloads": 1160,
+      "likes": 23,
+      "description": "\n\t\n\t\t\n\t\tDataset: Qualifire Benchmark Prompt Injection(Jailbreak vs. Benign) Datasets\n\t\n\n\n\t\n\t\t\n\t\tOverview\n\t\n\nThis dataset contains 5,000 prompts, each labeled as either jailbreak or benign. The dataset is designed for evaluating AI models' robustness against adversarial prompts and their ability to d",
+      "tags": [
+        "license:cc-by-nc-4.0",
+        "size_categories:1K<n<10K",
+        "format:csv",
+        "modality:text",
+        "library:datasets",
+        "library:pandas",
+        "library:mlcroissant",
+        "library:polars"
+      ],
+      "query": "prompt injection"
+    },
+    {
+      "id": "rubend18/ChatGPT-Jailbreak-Prompts",
+      "downloads": 1051,
+      "likes": 249,
+      "description": "\n\t\n\t\t\n\t\tDataset Card for Dataset Name\n\t\n\n\n\t\n\t\t\n\t\tName\n\t\n\nChatGPT Jailbreak Prompts\n\n\t\n\t\t\n\t\tDataset Summary\n\t\n\nChatGPT Jailbreak Prompts is a complete collection of jailbreak related prompts for ChatGPT. This dataset is intended to provide a valuable resource for understanding and generating text in ",
+      "tags": [
+        "task_categories:question-answering",
+        "task_categories:text-generation",
+        "task_categories:fill-mask",
+        "task_categories:zero-shot-classification",
+        "task_categories:table-question-answering",
+        "language:en",
+        "language:aa",
+        "size_categories:n<1K"
+      ],
+      "query": "jailbreak"
+    },
+    {
+      "id": "geekyrakshit/prompt-injection-dataset",
+      "downloads": 694,
+      "likes": 8,
+      "description": "Collected from the following datasets:\n\ndeepset/prompt-injections\nxTRam1/safe-guard-prompt-injection\njayavibhav/prompt-injection\n\n",
+      "tags": [
+        "language:en",
+        "size_categories:100K<n<1M",
+        "format:parquet",
+        "modality:text",
+        "library:datasets",
+        "library:pandas",
+        "library:mlcroissant",
+        "library:polars"
+      ],
+      "query": "prompt injection"
+    },
+    {
+      "id": "Mindgard/evaded-prompt-injection-and-jailbreak-samples",
+      "downloads": 686,
+      "likes": 8,
+      "description": "This dataset originates from our paper 'Bypassing Prompt Injection and Jailbreak Detection in LLM Guardrails'.\nThe dataset contains a mixture of prompt injections and jailbreak samples modified via character injection and adversarial ML evasion techniques (Techniques can be found within the paper ab",
+      "tags": [
+        "task_categories:text-classification",
+        "task_categories:text-generation",
+        "language:en",
+        "license:cc-by-nc-4.0",
+        "size_categories:10K<n<100K",
+        "format:parquet",
+        "modality:text",
+        "library:datasets"
+      ],
+      "query": "prompt injection"
+    },
+    {
+      "id": "jayavibhav/prompt-injection",
+      "downloads": 649,
+      "likes": 6,
+      "description": "",
+      "tags": [
+        "size_categories:100K<n<1M",
+        "format:parquet",
+        "modality:text",
+        "library:datasets",
+        "library:pandas",
+        "library:mlcroissant",
+        "library:polars",
+        "region:us"
+      ],
+      "query": "prompt injection"
+    },
+    {
+      "id": "facebook/cyberseceval3-visual-prompt-injection",
+      "downloads": 540,
+      "likes": 5,
+      "description": "\n\t\n\t\t\n\t\tDataset Card for CyberSecEval 3 - Visual Prompt Injection Benchmark\n\t\n\n\n\t\n\t\t\n\t\tDataset Details\n\t\n\n\n\t\n\t\t\n\t\tDataset Description\n\t\n\nThis dataset provides a multimodal benchmark for visual prompt injection, with text/image inputs. It is part of CyberSecEval 3, the third edition of Meta's flagshi",
+      "tags": [
+        "task_categories:text-generation",
+        "language:en",
+        "license:mit",
+        "size_categories:1K<n<10K",
+        "format:json",
+        "modality:image",
+        "modality:text",
+        "library:datasets"
+      ],
+      "query": "prompt injection"
+    },
+    {
+      "id": "Alignment-Lab-AI/Prompt-Injection-Test",
+      "downloads": 495,
+      "likes": 0,
+      "description": "",
+      "tags": [
+        "size_categories:1K<n<10K",
+        "format:json",
+        "modality:text",
+        "library:datasets",
+        "library:pandas",
+        "library:mlcroissant",
+        "library:polars",
+        "region:us"
+      ],
+      "query": "prompt injection"
+    },
+    {
+      "id": "neuralchemy/Prompt-injection-dataset",
+      "downloads": 469,
+      "likes": 5,
+      "description": "\n\t\n\t\t\n\t\tPrompt Injection Detection Dataset\n\t\n\nA comprehensive dataset for training and evaluating models that detect prompt injection attacks against Large Language Models (LLMs).\nThis dataset is intended for binary text classification (benign vs malicious) and includes real-world prompt injection p",
+      "tags": [
+        "task_categories:text-classification",
+        "language:en",
+        "license:apache-2.0",
+        "size_categories:10K<n<100K",
+        "format:parquet",
+        "format:optimized-parquet",
+        "modality:tabular",
+        "modality:text"
+      ],
+      "query": "prompt injection"
+    },
+    {
+      "id": "compl-ai/advbench",
+      "downloads": 435,
+      "likes": 0,
+      "description": "Created by Andy Zou and Zifan Wang and J. Zico Kolter and Matt Fredrikson\n(https://github.com/llm-attacks/llm-attacks)\n@misc{zou2023universal,\n      title={Universal and Transferable Adversarial Attacks on Aligned Language Models}, \n      author={Andy Zou and Zifan Wang and J. Zico Kolter and Matt F",
+      "tags": [
+        "license:mit",
+        "size_categories:n<1K",
+        "format:arrow",
+        "modality:text",
+        "library:datasets",
+        "library:mlcroissant",
+        "arxiv:2307.15043",
+        "region:us"
+      ],
+      "query": "advbench"
+    },
+    {
+      "id": "walledai/JailbreakBench",
+      "downloads": 331,
+      "likes": 4,
+      "description": "\n\t\n\t\t\n\t\tJailbreakBench: An Open Robustness Benchmark for Jailbreaking Language Models\n\t\n\nPaper: JailbreakBench: An Open Robustness Benchmark for Jailbreaking Large Language Models\nData: JailbreaBench-HFLink\n\n\t\n\t\t\n\t\tAbout\n\t\n\nJailbreakbench is an open-source robustness benchmark for jailbreaking large",
+      "tags": [
+        "language:en",
+        "size_categories:n<1K",
+        "format:parquet",
+        "modality:text",
+        "library:datasets",
+        "library:pandas",
+        "library:mlcroissant",
+        "library:polars"
+      ],
+      "query": "jailbreak"
+    },
+    {
+      "id": "WeifeiJin/AdvBench-Audio",
+      "downloads": 316,
+      "likes": 0,
+      "description": "\n\t\n\t\t\n\t\tAdvBench-Audio\n\t\n\n\n\n\nAdvBench-Audio is an audio-version benchmark used in our study to evaluate the safety, jailbreak, and adversarial robustness of audio-language models (ALMs). It contains audio renderings of adversarial prompts paired with their corresponding targets for safety evaluation",
+      "tags": [
+        "task_categories:question-answering",
+        "task_categories:audio-to-audio",
+        "task_categories:automatic-speech-recognition",
+        "language:en",
+        "license:cc-by-nc-4.0",
+        "size_categories:n<1K",
+        "format:audiofolder",
+        "modality:audio"
+      ],
+      "query": "advbench"
+    },
+    {
+      "id": "S-Labs/prompt-injection-dataset",
+      "downloads": 303,
+      "likes": 1,
+      "description": "\n\t\n\t\t\n\t\tPrompt Injection Detection Dataset\n\t\n\nA binary classification dataset for detecting prompt injection attacks in user inputs to LLM-based applications.\n\n\t\n\t\t\n\t\tDataset Description\n\t\n\nThis dataset is designed to train encoder-only models (e.g., BERT, RoBERTa, DistilBERT) to classify user input",
+      "tags": [
+        "task_categories:text-classification",
+        "language:en",
+        "license:mit",
+        "size_categories:10K<n<100K",
+        "format:csv",
+        "modality:text",
+        "library:datasets",
+        "library:pandas"
+      ],
+      "query": "prompt injection"
+    },
+    {
+      "id": "ata990/AdvBench-Audio-GPT4o-TTS",
+      "downloads": 281,
+      "likes": 0,
+      "description": "\n\t\n\t\t\n\t\t\ud83c\udfaf AdvBench-Audio-GPT4o-TTS\n\t\n\nAdversarial Benchmark Audio Samples for Evaluating the Security and Safety of Language Models (LMs)\n\n\n\t\n\t\t\n\t\t\ud83d\udd0d Overview\n\t\n\nAdvBench-Audio-GPT4o-TTS is a multilingual dataset of audio samples generated using OpenAI\u2019s GPT-4o Text-to-Speech (TTS) API. The dataset i",
+      "tags": [
+        "license:cc",
+        "size_categories:10K<n<100K",
+        "format:parquet",
+        "modality:audio",
+        "modality:text",
+        "library:datasets",
+        "library:pandas",
+        "library:mlcroissant"
+      ],
+      "query": "advbench"
+    },
+    {
+      "id": "JasperLS/prompt-injections",
+      "downloads": 256,
+      "likes": 21,
+      "description": "\n\t\n\t\t\n\t\tDataset Card for \"deberta-v3-base-injection-dataset\"\n\t\n\nMore Information needed\n",
+      "tags": [
+        "size_categories:n<1K",
+        "format:parquet",
+        "modality:text",
+        "library:datasets",
+        "library:pandas",
+        "library:mlcroissant",
+        "library:polars",
+        "region:us"
+      ],
+      "query": "prompt injection"
+    },
+    {
+      "id": "jayavibhav/prompt-injection-safety",
+      "downloads": 255,
+      "likes": 10,
+      "description": "",
+      "tags": [
+        "size_categories:10K<n<100K",
+        "format:parquet",
+        "modality:text",
+        "library:datasets",
+        "library:pandas",
+        "library:mlcroissant",
+        "library:polars",
+        "region:us"
+      ],
+      "query": "prompt injection"
+    },
+    {
+      "id": "walledai/JailbreakHub",
+      "downloads": 254,
+      "likes": 25,
+      "description": "\n\t\n\t\t\n\t\tIn-The-Wild Jailbreak Prompts on LLMs\n\t\n\nPaper: ``Do Anything Now'': Characterizing and Evaluating In-The-Wild Jailbreak Prompts on Large Language Models\nData: Dataset\n\n\t\n\t\t\n\t\tData\n\t\n\n\n\t\n\t\t\n\t\tPrompts\n\t\n\nOverall, authors collect 15,140 prompts from four platforms (Reddit, Discord, websites, a",
+      "tags": [
+        "language:en",
+        "license:mit",
+        "size_categories:10K<n<100K",
+        "format:parquet",
+        "modality:text",
+        "library:datasets",
+        "library:pandas",
+        "library:mlcroissant"
+      ],
+      "query": "jailbreak"
+    },
+    {
+      "id": "Mechanistic-Anomaly-Detection/llama3-jailbreaks",
+      "downloads": 236,
+      "likes": 3,
+      "description": "",
+      "tags": [
+        "size_categories:10K<n<100K",
+        "format:parquet",
+        "modality:text",
+        "library:datasets",
+        "library:pandas",
+        "library:mlcroissant",
+        "library:polars",
+        "region:us"
+      ],
+      "query": "jailbreak"
+    },
+    {
+      "id": "hirundo-io/prompt-injection-purple-llama",
+      "downloads": 223,
+      "likes": 0,
+      "description": "",
+      "tags": [
+        "size_categories:n<1K",
+        "format:parquet",
+        "modality:text",
+        "library:datasets",
+        "library:pandas",
+        "library:mlcroissant",
+        "library:polars",
+        "region:us"
+      ],
+      "query": "prompt injection"
+    },
+    {
+      "id": "protectai/prompt-injection-validation",
+      "downloads": 208,
+      "likes": 2,
+      "description": "\n\t\n\t\t\n\t\tDataset: Prompt Injection Validation\n\t\n\nThis dataset is used for validation of our Prompt Injection models.\n",
+      "tags": [
+        "size_categories:1K<n<10K",
+        "format:parquet",
+        "modality:text",
+        "library:datasets",
+        "library:pandas",
+        "library:mlcroissant",
+        "library:polars",
+        "region:us"
+      ],
+      "query": "prompt injection"
+    },
+    {
+      "id": "IDA-SERICS/Disaster-tweet-jailbreaking",
+      "downloads": 184,
+      "likes": 8,
+      "description": "Here the link to the paper: https://link.springer.com/chapter/10.1007/978-3-031-85240-4_14\n",
+      "tags": [
+        "license:apache-2.0",
+        "size_categories:1K<n<10K",
+        "format:parquet",
+        "modality:text",
+        "library:datasets",
+        "library:pandas",
+        "library:mlcroissant",
+        "library:polars"
+      ],
+      "query": "jailbreak"
+    },
+    {
+      "id": "deadbits/vigil-jailbreak-ada-002",
+      "downloads": 181,
+      "likes": 8,
+      "description": "\n\t\n\t\t\n\t\tVigil: LLM Jailbreak embeddings\n\t\n\n\nHomepage: github.com/deadbits/vigil-llm\n\nVigil is a Python framework and REST API for assessing Large Language Model (LLM) prompts against a set of scanners to detect prompt injections, jailbreaks, and other potentially risky inputs.\nThis repository contai",
+      "tags": [
+        "size_categories:n<1K",
+        "format:parquet",
+        "modality:text",
+        "library:datasets",
+        "library:pandas",
+        "library:mlcroissant",
+        "library:polars",
+        "region:us"
+      ],
+      "query": "jailbreak"
+    },
+    {
+      "id": "GuardrailsAI/detect-jailbreak",
+      "downloads": 179,
+      "likes": 6,
+      "description": "\n\t\n\t\t\n\t\tContent Warning:\n\t\n\nThis dataset contains unsafe model responses and user queries.  Viewers may find the content disturbing.\n\n\t\n\t\t\n\t\tOverview\n\t\n\nOur evaluation dataset combines three existing datasets with custom augmentations to create a robust framework for assessing LLM vulnerabilities an",
+      "tags": [
+        "task_categories:text-classification",
+        "language:en",
+        "license:mit",
+        "size_categories:10K<n<100K",
+        "format:parquet",
+        "modality:text",
+        "library:datasets",
+        "library:pandas"
+      ],
+      "query": "jailbreak"
+    },
+    {
+      "id": "rangell/jailbreak_transfer",
+      "downloads": 147,
+      "likes": 1,
+      "description": "",
+      "tags": [
+        "region:us"
+      ],
+      "query": "jailbreak"
+    },
+    {
+      "id": "AlignmentResearch/AdvBench",
+      "downloads": 144,
+      "likes": 0,
+      "description": "",
+      "tags": [
+        "size_categories:1K<n<10K",
+        "format:parquet",
+        "modality:text",
+        "library:datasets",
+        "library:pandas",
+        "library:mlcroissant",
+        "library:polars",
+        "region:us"
+      ],
+      "query": "advbench"
+    },
+    {
+      "id": "Deep1994/ReNeLLM-Jailbreak",
+      "downloads": 139,
+      "likes": 4,
+      "description": "\n\t\n\t\t\n\t\tDataset Details\n\t\n\nThis dataset contains jailbreak prompts generated by the ReNeLLM method on Advbench, and is intended for research use ONLY.\n\n\t\n\t\t\n\t\tDataset Sources\n\t\n\n\n\n\nRepository: https://github.com/NJUNLP/ReNeLLM\nPaper: https://arxiv.org/abs/2311.08268\n\n\n\t\n\t\t\n\t\tCitation\n\t\n\nIf you find ",
+      "tags": [
+        "license:mit",
+        "size_categories:100K<n<1M",
+        "format:json",
+        "modality:tabular",
+        "modality:text",
+        "library:datasets",
+        "library:pandas",
+        "library:mlcroissant"
+      ],
+      "query": "jailbreak"
+    },
+    {
+      "id": "wambosec/prompt-injections",
+      "downloads": 131,
+      "likes": 0,
+      "description": "\n\t\n\t\t\n\t\twambosec/prompt-injections\n\t\n\nA dataset of prompts for training prompt injection detection models.\n\n\t\n\t\t\n\t\tDataset Description\n\t\n\nThis dataset contains prompts labeled as either benign (normal user requests) or malicious (prompt injection attacks).\n\n\t\n\t\t\n\t\tDataset Statistics\n\t\n\n\nTotal prompt",
+      "tags": [
+        "task_categories:text-classification",
+        "language:en",
+        "license:mit",
+        "size_categories:1K<n<10K",
+        "format:parquet",
+        "format:optimized-parquet",
+        "modality:text",
+        "library:datasets"
+      ],
+      "query": "prompt injection"
+    },
+    {
+      "id": "youbin2014/JailbreakDB",
+      "downloads": 118,
+      "likes": 3,
+      "description": "\n\t\n\t\t\n\t\tJailbreakDB\n\t\n\nTwo large-scale, curated text-only datasets for LLM safety research:\n\ntext_jailbreak_unique.csv (~6.6M rows): jailbreak/adversarial prompts\ntext_regular_unique.csv (~5.7M rows): benign prompts\n\nEach record includes: system_prompt, user_prompt, jailbreak (0/1), source, tactic.\n",
+      "tags": [
+        "task_categories:text-classification",
+        "language:en",
+        "license:cc-by-4.0",
+        "arxiv:2510.15476",
+        "region:us",
+        "llm-safety",
+        "jailbreak",
+        "prompts"
+      ],
+      "query": "jailbreak"
+    },
+    {
+      "id": "wambosec/prompt-injections-subtle",
+      "downloads": 117,
+      "likes": 0,
+      "description": "\n\t\n\t\t\n\t\twambosec/prompt-injections-subtle\n\t\n\nA dataset of prompts for training prompt injection detection models.\n\n\t\n\t\t\n\t\tDataset Description\n\t\n\nThis dataset contains prompts labeled as either benign (normal user requests) or malicious (prompt injection attacks).\n\n\t\n\t\t\n\t\tDataset Statistics\n\t\n\n\nTotal",
+      "tags": [
+        "task_categories:text-classification",
+        "language:en",
+        "license:mit",
+        "size_categories:n<1K",
+        "format:parquet",
+        "format:optimized-parquet",
+        "modality:text",
+        "library:datasets"
+      ],
+      "query": "prompt injection"
+    },
+    {
+      "id": "NoorNizar/AdvBench",
+      "downloads": 112,
+      "likes": 0,
+      "description": "\n\t\n\t\t\n\t\tDataset Card for AdvBench\n\t\n\nPaper: Universal and Transferable Adversarial Attacks on Aligned Language Models\nData: AdvBench Dataset\n\n\t\n\t\t\n\t\tAbout\n\t\n\nAdvBench is a set of 500 harmful behaviors formulated as instructions. These behaviors\nrange over the same themes as the harmful strings setti",
+      "tags": [
+        "language:en",
+        "license:mit",
+        "size_categories:n<1K",
+        "format:parquet",
+        "modality:text",
+        "library:datasets",
+        "library:pandas",
+        "library:mlcroissant"
+      ],
+      "query": "advbench"
+    },
+    {
+      "id": "assoni2002/jailbreak_audio_roleplay_test_data_04",
+      "downloads": 106,
+      "likes": 0,
+      "description": "",
+      "tags": [
+        "size_categories:n<1K",
+        "format:parquet",
+        "modality:audio",
+        "modality:text",
+        "library:datasets",
+        "library:pandas",
+        "library:mlcroissant",
+        "library:polars"
+      ],
+      "query": "jailbreak"
+    },
+    {
+      "id": "djapp18/JailbreaksOverTime",
+      "downloads": 105,
+      "likes": 2,
+      "description": "\n\t\n\t\t\n\t\tJailbreaksOverTime: Detecting Jailbreak Attacks Under Distribution Shift\n\t\n\nThis is the eponymous benchmark accompanying the paper JailbreaksOverTime: Detecting Jailbreak Attacks Under Distribution Shift (ArXiv Link), published in The 18th ACM Workshop on Artificial Intelligence and Security",
+      "tags": [
+        "license:cc-by-4.0",
+        "size_categories:10K<n<100K",
+        "format:json",
+        "modality:document",
+        "modality:text",
+        "library:datasets",
+        "library:pandas",
+        "library:mlcroissant"
+      ],
+      "query": "jailbreak"
+    },
+    {
+      "id": "assoni2002/text_testdata_general_jailbreak_dt",
+      "downloads": 101,
+      "likes": 0,
+      "description": "\n\t\n\t\t\n\t\tDataset Card for \"testdata_general_jailbreak_dt\"\n\t\n\nMore Information needed\n",
+      "tags": [
+        "size_categories:n<1K",
+        "format:parquet",
+        "modality:tabular",
+        "modality:text",
+        "library:datasets",
+        "library:pandas",
+        "library:mlcroissant",
+        "library:polars"
+      ],
+      "query": "jailbreak"
+    },
+    {
+      "id": "kelly8tom/advbench_orig",
+      "downloads": 85,
+      "likes": 0,
+      "description": "",
+      "tags": [
+        "size_categories:n<1K",
+        "format:json",
+        "modality:text",
+        "library:datasets",
+        "library:pandas",
+        "library:mlcroissant",
+        "library:polars",
+        "region:us"
+      ],
+      "query": "advbench"
+    },
+    {
+      "id": "NoorNizar/AdvBench-Completions-ML",
+      "downloads": 79,
+      "likes": 0,
+      "description": "",
+      "tags": [
+        "size_categories:1K<n<10K",
+        "format:parquet",
+        "modality:text",
+        "library:datasets",
+        "library:pandas",
+        "library:mlcroissant",
+        "library:polars",
+        "region:us"
+      ],
+      "query": "advbench"
+    },
+    {
+      "id": "NoorNizar/AdvBench-ML",
+      "downloads": 78,
+      "likes": 0,
+      "description": "\n\t\n\t\t\n\t\tDataset Card for AdvBench\n\t\n\nPaper: Universal and Transferable Adversarial Attacks on Aligned Language Models\nData: AdvBench Dataset\n\n\t\n\t\t\n\t\tAbout\n\t\n\nAdvBench is a set of 500 harmful behaviors formulated as instructions. These behaviors\nrange over the same themes as the harmful strings setti",
+      "tags": [
+        "language:en",
+        "license:mit",
+        "size_categories:1K<n<10K",
+        "format:parquet",
+        "modality:text",
+        "library:datasets",
+        "library:pandas",
+        "library:mlcroissant"
+      ],
+      "query": "advbench"
+    },
+    {
+      "id": "simonycl/multilingual_advbench",
+      "downloads": 48,
+      "likes": 1,
+      "description": "",
+      "tags": [
+        "size_categories:10K<n<100K",
+        "format:parquet",
+        "modality:text",
+        "library:datasets",
+        "library:pandas",
+        "library:mlcroissant",
+        "library:polars",
+        "region:us"
+      ],
+      "query": "advbench"
+    },
+    {
+      "id": "S3IC/advbench",
+      "downloads": 34,
+      "likes": 1,
+      "description": "\n\t\n\t\t\n\t\tAdvBench\n\t\n\nThis repository hosts a copy of the widely used AdvBench dataset, \na benchmark for evaluating the adversarial robustness and safety alignment of Large Language Models (LLMs).\nAdvBench consists of adversarial prompts designed to elicit unsafe, harmful, or policy-violating response",
+      "tags": [
+        "task_categories:question-answering",
+        "language:en",
+        "license:mit",
+        "size_categories:n<1K",
+        "format:json",
+        "modality:text",
+        "library:datasets",
+        "library:pandas"
+      ],
+      "query": "advbench"
+    },
+    {
+      "id": "lenML/advbench_behaviors_m5",
+      "downloads": 30,
+      "likes": 1,
+      "description": "\n\t\n\t\t\n\t\tAbout advbench_behaviors_m5\n\t\n\n\u6b64\u6570\u636e\u96c6\u4e3a advbench_behaviors.csv \u6587\u4ef6\u7684\u591a\u8bed\u8a00\u7ffb\u8bd1\u7248\u672c\u3002\u4e00\u4e2a\u5e38\u89c1\u7684\u4efb\u52a1\u662f\u7528\u4e8e abliterator \u811a\u672c\u3002\n\n\n\t\n\t\t\n\t\tDataset Card for AdvBench\n\t\n\nPaper: Universal and Transferable Adversarial Attacks on Aligned Language Models\nData: AdvBench Dataset\n\n\t\n\t\t\n\t\tAbout\n\t\n\nAdvBench is a set of 500 harmful be",
+      "tags": [
+        "language:en",
+        "language:zh",
+        "language:ko",
+        "language:jp",
+        "language:ru",
+        "license:mit",
+        "size_categories:n<1K",
+        "format:json"
+      ],
+      "query": "advbench"
+    },
+    {
+      "id": "McGill-NLP/AdvBench-IR",
+      "downloads": 29,
+      "likes": 4,
+      "description": "\n  Exploiting Instruction-Following Retrievers for Malicious Information Retrieval\n\n\n\n\n\n\nThis dataset includes malicious documents in response to AdvBench (Zou et al., 2023) queries. We have generated these documents using the Mistral-7B-Instruct-v0.2 language model.\nfrom datasets import load_datase",
+      "tags": [
+        "task_categories:question-answering",
+        "language:en",
+        "license:mit",
+        "size_categories:n<1K",
+        "format:json",
+        "modality:text",
+        "library:datasets",
+        "library:pandas"
+      ],
+      "query": "advbench"
+    },
+    {
+      "id": "simonycl/aya-23-8B_advbench_jailbreak",
+      "downloads": 27,
+      "likes": 1,
+      "description": "",
+      "tags": [
+        "size_categories:n<1K",
+        "format:parquet",
+        "modality:text",
+        "library:datasets",
+        "library:pandas",
+        "library:mlcroissant",
+        "library:polars",
+        "region:us"
+      ],
+      "query": "advbench"
+    },
+    {
+      "id": "ailor/AdvBench-omni",
+      "downloads": 27,
+      "likes": 0,
+      "description": "\n\t\n\t\t\n\t\tAdvBench-Omni\n\t\n\nPaper | Code\nAdvBench-Omni is a dataset constructed to evaluate and reveal safety vulnerabilities in Omni-modal Large Language Models (OLLMs). It is based on a modality-semantics decoupling principle to study how OLLMs handle cross-modal safety risks and conflicts.\n\n\t\n\t\t\n\t\n\t",
+      "tags": [
+        "task_categories:any-to-any",
+        "size_categories:1K<n<10K",
+        "format:audiofolder",
+        "modality:audio",
+        "modality:image",
+        "modality:video",
+        "library:datasets",
+        "library:mlcroissant"
+      ],
+      "query": "advbench"
+    },
+    {
+      "id": "aurora-m/adversarial-prompts",
+      "downloads": 26,
+      "likes": 1,
+      "description": "Adding various adversrial permuations to questions in the aurora-redteam dataset.\n",
+      "tags": [
+        "license:cc",
+        "size_categories:10K<n<100K",
+        "format:json",
+        "modality:text",
+        "library:datasets",
+        "library:pandas",
+        "library:mlcroissant",
+        "library:polars"
+      ],
+      "query": "adversarial prompt"
+    },
+    {
+      "id": "denis1699/advbench-benign-version",
+      "downloads": 26,
+      "likes": 0,
+      "description": "",
+      "tags": [
+        "size_categories:n<1K",
+        "format:parquet",
+        "modality:text",
+        "library:datasets",
+        "library:pandas",
+        "library:mlcroissant",
+        "library:polars",
+        "region:us"
+      ],
+      "query": "advbench"
+    },
+    {
+      "id": "nishaanthkanna/multilingual_advbench_aya231_generated",
+      "downloads": 23,
+      "likes": 0,
+      "description": "",
+      "tags": [
+        "size_categories:10K<n<100K",
+        "format:parquet",
+        "modality:text",
+        "library:datasets",
+        "library:pandas",
+        "library:mlcroissant",
+        "library:polars",
+        "region:us"
+      ],
+      "query": "advbench"
+    },
+    {
+      "id": "nishaanthkanna/multilingual_advbench_llama31_generated",
+      "downloads": 21,
+      "likes": 0,
+      "description": "",
+      "tags": [
+        "size_categories:10K<n<100K",
+        "format:parquet",
+        "modality:text",
+        "library:datasets",
+        "library:pandas",
+        "library:mlcroissant",
+        "library:polars",
+        "region:us"
+      ],
+      "query": "advbench"
+    },
+    {
+      "id": "harpreetsahota/adversarial-prompts",
+      "downloads": 17,
+      "likes": 4,
+      "description": "\n\t\n\t\t\n\t\tLanguage Model Testing Dataset \ud83d\udcca\ud83e\udd16\n\t\n\n\n\t\n\t\t\n\t\tIntroduction \ud83c\udf10\n\t\n\nThis repository provides a dataset inspired by the paper \"Explore, Establish, Exploit: Red Teaming Language Models from Scratch\" It's designed for anyone interested in testing language models (LMs) for biases, toxicity, and misin",
+      "tags": [
+        "size_categories:n<1K",
+        "format:parquet",
+        "modality:text",
+        "library:datasets",
+        "library:pandas",
+        "library:mlcroissant",
+        "library:polars",
+        "arxiv:2306.09442"
+      ],
+      "query": "adversarial prompt"
+    },
+    {
+      "id": "AmberYifan/AdvBench_safe",
+      "downloads": 16,
+      "likes": 0,
+      "description": "",
+      "tags": [
+        "size_categories:n<1K",
+        "format:json",
+        "modality:text",
+        "library:datasets",
+        "library:pandas",
+        "library:mlcroissant",
+        "library:polars",
+        "region:us"
+      ],
+      "query": "advbench"
+    },
+    {
+      "id": "quirky-lats-at-mats/augmented_advbench",
+      "downloads": 14,
+      "likes": 0,
+      "description": "",
+      "tags": [
+        "size_categories:n<1K",
+        "format:parquet",
+        "modality:text",
+        "library:datasets",
+        "library:pandas",
+        "library:mlcroissant",
+        "library:polars",
+        "region:us"
+      ],
+      "query": "advbench"
+    },
+    {
+      "id": "gurucharan-marthi/adversarial-madeup-prompts",
+      "downloads": 13,
+      "likes": 0,
+      "description": "",
+      "tags": [
+        "size_categories:1K<n<10K",
+        "format:imagefolder",
+        "modality:image",
+        "library:datasets",
+        "library:mlcroissant",
+        "region:us"
+      ],
+      "query": "adversarial prompt"
+    },
+    {
+      "id": "rishitchugh/successful_adversarial_prompts",
+      "downloads": 12,
+      "likes": 0,
+      "description": "\n\t\n\t\t\n\t\tCitation\n\t\n\nIf you use this dataset, please cite the associated paper:\n@article{chugh2026recap,\n  title   = {RECAP: A Resource-Efficient Method for Adversarial Prompting in Large Language Models},\n  author  = {Chugh, Rishit},\n  journal = {arXiv preprint arXiv:2601.15331},\n  year    = {2026},",
+      "tags": [
+        "license:mit",
+        "size_categories:n<1K",
+        "format:csv",
+        "modality:tabular",
+        "modality:text",
+        "library:datasets",
+        "library:pandas",
+        "library:mlcroissant"
+      ],
+      "query": "adversarial prompt"
+    },
+    {
+      "id": "Chetan-k-p/adversarial-prompts",
+      "downloads": 9,
+      "likes": 0,
+      "description": "",
+      "tags": [
+        "size_categories:10K<n<100K",
+        "format:parquet",
+        "modality:text",
+        "library:datasets",
+        "library:pandas",
+        "library:mlcroissant",
+        "library:polars",
+        "region:us"
+      ],
+      "query": "adversarial prompt"
+    },
+    {
+      "id": "aayush-cloudy/adversarial-sd-prompts",
+      "downloads": 9,
+      "likes": 0,
+      "description": "",
+      "tags": [
+        "size_categories:1K<n<10K",
+        "format:parquet",
+        "modality:image",
+        "modality:text",
+        "library:datasets",
+        "library:dask",
+        "library:mlcroissant",
+        "library:polars"
+      ],
+      "query": "adversarial prompt"
+    },
+    {
+      "id": "gordonFang/persuasive_adversarial_prompts",
+      "downloads": 8,
+      "likes": 2,
+      "description": "",
+      "tags": [
+        "size_categories:1K<n<10K",
+        "format:csv",
+        "modality:text",
+        "library:datasets",
+        "library:pandas",
+        "library:mlcroissant",
+        "library:polars",
+        "region:us"
+      ],
+      "query": "adversarial prompt"
+    },
+    {
+      "id": "marcov/adversarial_qa_dbidaf_promptsource",
+      "downloads": 5,
+      "likes": 0,
+      "description": "",
+      "tags": [
+        "size_categories:10K<n<100K",
+        "format:parquet",
+        "modality:text",
+        "library:datasets",
+        "library:pandas",
+        "library:mlcroissant",
+        "library:polars",
+        "region:us"
+      ],
+      "query": "adversarial prompt"
+    },
+    {
+      "id": "marcov/adversarial_qa_adversarialQA_promptsource",
+      "downloads": 5,
+      "likes": 0,
+      "description": "",
+      "tags": [
+        "size_categories:100K<n<1M",
+        "format:parquet",
+        "modality:text",
+        "library:datasets",
+        "library:pandas",
+        "library:mlcroissant",
+        "library:polars",
+        "region:us"
+      ],
+      "query": "adversarial prompt"
+    },
+    {
+      "id": "marcov/adversarial_qa_droberta_promptsource",
+      "downloads": 5,
+      "likes": 0,
+      "description": "",
+      "tags": [
+        "size_categories:10K<n<100K",
+        "format:parquet",
+        "modality:text",
+        "library:datasets",
+        "library:pandas",
+        "library:mlcroissant",
+        "library:polars",
+        "region:us"
+      ],
+      "query": "adversarial prompt"
+    },
+    {
+      "id": "marcov/adversarial_qa_dbert_promptsource",
+      "downloads": 5,
+      "likes": 0,
+      "description": "",
+      "tags": [
+        "size_categories:10K<n<100K",
+        "format:parquet",
+        "modality:text",
+        "library:datasets",
+        "library:pandas",
+        "library:mlcroissant",
+        "library:polars",
+        "region:us"
+      ],
+      "query": "adversarial prompt"
+    },
+    {
+      "id": "ivnle/advbench_harmful_strings",
+      "downloads": 4,
+      "likes": 0,
+      "description": "",
+      "tags": [
+        "size_categories:n<1K",
+        "format:csv",
+        "modality:text",
+        "library:datasets",
+        "library:pandas",
+        "library:mlcroissant",
+        "library:polars",
+        "region:us"
+      ],
+      "query": "harmful strings"
+    },
+    {
+      "id": "nate-rahn/0620-non_adversarial_few_shot_multi_attr_prompt_dset",
+      "downloads": 3,
+      "likes": 0,
+      "description": "",
+      "tags": [
+        "size_categories:n<1K",
+        "format:parquet",
+        "modality:text",
+        "library:datasets",
+        "library:pandas",
+        "library:mlcroissant",
+        "library:polars",
+        "region:us"
+      ],
+      "query": "adversarial prompt"
+    }
+  ],
+  "medium_relevance_datasets": [
+    {
+      "id": "kumitang/llm_physical_safety_benchmark",
+      "downloads": 36,
+      "likes": 0,
+      "description": "\n\t\n\t\t\n\t\tLLM Physical Safety Benchmark in Drone Control\n\t\n\nThis benchmark consists of four datasets designed to evaluate the performance of Large Language Models (LLMs) in controlling drones and their vulnerability to physical attacks. The datasets are categorized into different types of attacks:\n\nDe",
+      "tags": [
+        "task_categories:question-answering",
+        "language:en",
+        "license:mit",
+        "size_categories:n<1K",
+        "format:json",
+        "modality:text",
+        "library:datasets",
+        "library:dask"
+      ],
+      "query": "llm safety benchmark"
+    },
+    {
+      "id": "J-Q/LLM-Red-Teaming-Cognitive-Profiles",
+      "downloads": 34,
+      "likes": 0,
+      "description": "\n\t\n\t\t\n\t\tA Novel Biomimetic Approach to Red Teaming A.I. Models\n\t\n\nThis dataset presents the results of a red teaming experiment using simulated cognitive profiles to test the behavioral reliability of large language models (LLMs). By mimicking five neurocognitive conditions \u2014 ADHD, Amnesia, OCD, Sch",
+      "tags": [
+        "license:mit",
+        "size_categories:n<1K",
+        "format:imagefolder",
+        "modality:image",
+        "library:datasets",
+        "library:mlcroissant",
+        "region:us"
+      ],
+      "query": "llm red teaming"
+    },
+    {
+      "id": "TrustSafeAI/llm_physical_safety_benchmark",
+      "downloads": 13,
+      "likes": 0,
+      "description": "\n\t\n\t\t\n\t\tLLM Physical Safety Benchmark in Drone Control\n\t\n\nThis benchmark consists of four datasets designed to evaluate the performance of Large Language Models (LLMs) in controlling drones and their vulnerability to physical attacks. The datasets are categorized into different types of attacks:\n\nDe",
+      "tags": [
+        "task_categories:question-answering",
+        "language:en",
+        "license:mit",
+        "size_categories:n<1K",
+        "format:json",
+        "modality:text",
+        "library:datasets",
+        "library:dask"
+      ],
+      "query": "llm safety benchmark"
+    }
+  ],
+  "other_datasets": [
+    {
+      "id": "Lakera/mosscap_prompt_injection",
+      "downloads": 1208,
+      "likes": 14,
+      "description": "\n\t\n\t\t\n\t\tmosscap_prompt_injection\n\t\n\n\n\nThis is a dataset of prompt injections submitted to the game Mosscap by Lakera.\nThis variant of the game Gandalf was created for DEF CON 31.\nNote that the Mosscap levels may no longer be available in the future.\nNote that we release every prompt that we received",
+      "tags": [
+        "license:mit",
+        "size_categories:100K<n<1M",
+        "format:parquet",
+        "modality:text",
+        "library:datasets",
+        "library:pandas",
+        "library:mlcroissant",
+        "library:polars"
+      ],
+      "query": "prompt injection"
+    },
+    {
+      "id": "reshabhs/SPML_Chatbot_Prompt_Injection",
+      "downloads": 902,
+      "likes": 23,
+      "description": "\n\t\n\t\t\n\t\tSPML Chatbot Prompt Injection Dataset\n\t\n\nArxiv Paper\nIntroducing the SPML Chatbot Prompt Injection Dataset: a robust collection of system prompts designed to create realistic chatbot interactions, coupled with a diverse array of annotated user prompts that attempt to carry out prompt injecti",
+      "tags": [
+        "task_categories:text-classification",
+        "language:en",
+        "license:mit",
+        "size_categories:10K<n<100K",
+        "format:csv",
+        "modality:tabular",
+        "modality:text",
+        "library:datasets"
+      ],
+      "query": "prompt injection"
+    },
+    {
+      "id": "yanismiraoui/prompt_injections",
+      "downloads": 679,
+      "likes": 4,
+      "description": "\n\t\n\t\t\n\t\tDataset Card for Prompt Injections by  Yanis Miraoui  \ud83d\udc4b\n\t\n\n\n\t\n\t\t\n\t\tDataset Description\n\t\n\nThis dataset of prompt injections enriches Large Language Models (LLMs) by providing task-specific examples and prompts, helping improve LLMs' performance and control their behavior.\n\n\t\n\t\t\n\t\tDataset Sum",
+      "tags": [
+        "annotations_creators:no-annotation",
+        "multilinguality:multilingual",
+        "source_datasets:original",
+        "language:en",
+        "language:fr",
+        "language:de",
+        "language:es",
+        "language:pt"
+      ],
+      "query": "prompt injection"
+    },
+    {
+      "id": "imoxto/prompt_injection_cleaned_dataset",
+      "downloads": 141,
+      "likes": 4,
+      "description": "\n\t\n\t\t\n\t\tDataset Card for \"prompt_injection_cleaned_dataset\"\n\t\n\nMore Information needed\n",
+      "tags": [
+        "size_categories:100K<n<1M",
+        "format:parquet",
+        "modality:tabular",
+        "modality:text",
+        "library:datasets",
+        "library:dask",
+        "library:mlcroissant",
+        "library:polars"
+      ],
+      "query": "prompt injection"
+    }
+  ]
+}

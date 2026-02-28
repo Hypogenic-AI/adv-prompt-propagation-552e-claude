@@ -1,0 +1,55 @@
+{
+  "H1_persistence": {
+    "mean": 0.32765609560548914,
+    "std": 0.12151104539130139,
+    "baseline": 0.7,
+    "t_stat": -35.60371987923876,
+    "p_value": 3.554285138468305e-70,
+    "cohens_d": -3.064280314562793,
+    "significant": 1
+  },
+  "H3_topology": {
+    "F_stat": 0.16277765665410768,
+    "p_value": 0.8499504251644946,
+    "eta_squared": 0.0024602603218811026,
+    "significant": 0,
+    "topology_means": {
+      "chain": 0.31971281845149924,
+      "star": 0.3342283141065861,
+      "mesh": 0.3290271542583821
+    }
+  },
+  "H4_complexity": {
+    "spearman_rho": 0.1427056293551497,
+    "p_value": 0.09871140248683513,
+    "significant": 0,
+    "complexity_means": {
+      "simple": 0.3052718489438763,
+      "medium": 0.3299249929790301,
+      "complex": 0.34777144489356104
+    }
+  },
+  "persistence_rate": {
+    "overall_mean": 0.40925925925925927,
+    "overall_std": 0.3490490912521114,
+    "by_type": {
+      "direct_override": 0.6666666666666666,
+      "context_poisoning": 0.75,
+      "role_hijack": 0.009259259259259259,
+      "payload_propagation": 0.23148148148148148,
+      "subtle_bias": 0.3888888888888889
+    }
+  },
+  "injection_type_comparison": {
+    "H_stat": 101.35245703219562,
+    "p_value": 5.0685577818299475e-21,
+    "significant": 1
+  },
+  "H2_mutation": {
+    "mean_decay": 0.04941999421940125,
+    "std_decay": 0.05936805595160303,
+    "t_stat": 9.672010217284521,
+    "p_value": 4.152335528766024e-17,
+    "significant": 1
+  }
+}

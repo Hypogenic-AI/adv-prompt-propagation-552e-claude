@@ -1,0 +1,134 @@
+\section{Results}
+\label{sec:results}
+
+We organize our results around the five pre-registered hypotheses, then present additional analyses on propagation patterns and error cases.
+
+\subsection{Injection Persistence Across Agent Chains}
+
+\para{Marker-based persistence.}
+\Tabref{tab:persistence} presents the \ipr for each injection type across topologies. Context poisoning achieves the highest overall persistence at 75.0\%, followed by direct override at 66.7\%. Subtle bias shows moderate persistence (38.9\%), payload propagation achieves 23.1\%, and role hijack is nearly completely ineffective at 0.9\%.
+
+\begin{table}[t]
+    \centering
+    \caption{Marker-based Injection Persistence Rate (\ipr) by injection type and topology. \ipr measures the fraction of downstream agents whose outputs contain the injection-specific marker. Best results per row in \textbf{bold}.}
+    \label{tab:persistence}
+    \begin{tabular}{@{}lcccc@{}}
+        \toprule
+        \textbf{Injection Type} & \textbf{Overall} & \textbf{\chaintopo} & \textbf{\startopo} & \textbf{\meshtopo} \\
+        \midrule
+        \contextpoisoning & \textbf{0.750} & 0.611 & \textbf{0.833} & 0.806 \\
+        \directoverride & 0.667 & 0.500 & \textbf{0.806} & 0.694 \\
+        \subtlebias & 0.389 & 0.306 & \textbf{0.444} & 0.417 \\
+        \payloadprop & 0.231 & \textbf{0.250} & 0.222 & 0.222 \\
+        \rolehijack & 0.009 & 0.000 & 0.000 & \textbf{0.028} \\
+        \midrule
+        All types & 0.409 & 0.333 & 0.461 & 0.433 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+The difference across injection types is highly significant (Kruskal-Wallis $H = 101.35$, $p < 10^{-20}$), spanning nearly two orders of magnitude from 0.9\% to 75.0\%.
+
+\para{Semantic similarity.}
+The mean semantic similarity between injection content and agent outputs is $0.328 \pm 0.122$ across all injected conditions. This is lower than the pre-registered threshold of 0.70 because agents do not reproduce injections verbatim---they paraphrase and integrate adversarial content into their analytical outputs. The marker-based \ipr provides a more reliable measure of whether specific payload content propagated.
+
+\subsection{Semantic Mutation During Propagation}
+
+We test whether adversarial content undergoes significant transformation as it traverses agent hops. The mean semantic drift from initial to final hop is $0.049 \pm 0.059$, which is significantly different from zero (one-sample $t = 9.67$, $p < 10^{-16}$, Cohen's $d = 0.83$, a large effect). This confirms that agents systematically transform adversarial content through paraphrasing, role-specific reframing, and integration with legitimate analytical content.
+
+\Figref{fig:mutation} shows the semantic similarity decay across agent positions in the chain topology, where the sequential structure makes hop-by-hop analysis most interpretable. Similarity to the injection decreases monotonically from Agent~0 to Agent~3, confirming progressive semantic drift.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.65\linewidth]{figures/mutation_across_hops.png}
+    \caption{Semantic similarity to the injection content across agent hops for each topology. In the \chaintopo topology, similarity decreases monotonically from Agent~0 to Agent~3, demonstrating progressive semantic mutation. The \startopo and \meshtopo topologies show less uniform decay patterns because multiple agents receive Agent~0's output directly.}
+    \label{fig:mutation}
+\end{figure}
+
+\subsection{Effect of Network Topology}
+
+Contrary to our hypothesis and prior theoretical predictions~\citep{toma2025,netsafe2024}, network topology has no significant effect on semantic similarity to the injection (ANOVA $F = 0.16$, $p = 0.85$, $\eta^2 = 0.003$). \Tabref{tab:similarity} shows that the mean similarity is nearly identical across topologies: \chaintopo at $0.320 \pm 0.112$, \startopo at $0.334 \pm 0.129$, and \meshtopo at $0.329 \pm 0.125$.
+
+\begin{table}[t]
+    \centering
+    \caption{Semantic similarity to injection content by topology and task complexity. Values are mean $\pm$ standard deviation. Topology produces no significant differences ($p = 0.85$), while complexity shows a marginal positive trend ($\rho = 0.14$, $p = 0.099$).}
+    \label{tab:similarity}
+    \begin{tabular}{@{}lc@{}}
+        \toprule
+        \textbf{Condition} & \textbf{Semantic Similarity} \\
+        \midrule
+        All injected & $0.328 \pm 0.122$ \\
+        \midrule
+        \chaintopo topology & $0.320 \pm 0.112$ \\
+        \startopo topology & $0.334 \pm 0.129$ \\
+        \meshtopo topology & $0.329 \pm 0.125$ \\
+        \midrule
+        Simple tasks & $0.305 \pm 0.151$ \\
+        Medium tasks & $0.330 \pm 0.105$ \\
+        Complex tasks & $0.348 \pm 0.102$ \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+This null result is explained by the structure of our experiment: Agent~0 (the injection target) always produces the first output, and all downstream agents receive this output regardless of topology. For topology-agnostic injections, the communication structure does not modulate propagation because the injection reaches all agents through Agent~0's output.
+
+\subsection{Task Complexity and Persistence}
+
+The Spearman rank correlation between task complexity and semantic similarity is $\rho = 0.14$ ($p = 0.099$), providing only marginal evidence for a complexity--persistence relationship. As shown in \tabref{tab:similarity}, complex tasks show slightly higher similarity ($0.348$) than simple tasks ($0.305$), but the difference does not reach statistical significance at $\alpha = 0.05$.
+
+\subsection{Task Degradation}
+
+All five injection types cause statistically significant task degradation compared to clean baselines ($p < 10^{-5}$ for all types). \Tabref{tab:degradation} presents per-type degradation values. \contextpoisoning and \directoverride produce the highest degradation (13.6\% and 13.4\%, respectively), consistent with their high persistence rates. Even the least effective injection types (\rolehijack and \payloadprop) cause approximately 10\% degradation.
+
+\begin{table}[t]
+    \centering
+    \caption{Task degradation by injection type, measured as $1 - \text{cos\_sim}(\text{clean}, \text{injected})$ between matched agent outputs. All types cause significant degradation ($p < 10^{-5}$). Higher values indicate greater deviation from clean outputs.}
+    \label{tab:degradation}
+    \begin{tabular}{@{}lcc@{}}
+        \toprule
+        \textbf{Injection Type} & \textbf{Task Degradation} & \textbf{$p$-value} \\
+        \midrule
+        \contextpoisoning & $\textbf{0.136} \pm 0.049$ & $< 10^{-5}$ \\
+        \directoverride & $0.134 \pm 0.058$ & $< 10^{-5}$ \\
+        \subtlebias & $0.106 \pm 0.036$ & $< 10^{-5}$ \\
+        \payloadprop & $0.099 \pm 0.039$ & $< 10^{-5}$ \\
+        \rolehijack & $0.099 \pm 0.032$ & $< 10^{-5}$ \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{Hypothesis Summary}
+
+\Tabref{tab:hypotheses} summarizes the outcomes of our five pre-registered hypotheses.
+
+\begin{table}[t]
+    \centering
+    \caption{Summary of hypothesis testing results. Effect sizes are Cohen's $d$ for $t$-tests and $\eta^2$ for ANOVA.}
+    \label{tab:hypotheses}
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{@{}p{3.8cm}lllll@{}}
+        \toprule
+        \textbf{Hypothesis} & \textbf{Result} & \textbf{Test} & \textbf{Statistic} & \textbf{$p$-value} & \textbf{Effect Size} \\
+        \midrule
+        H1: Injection persists & Partial (marker: yes) & One-sample $t$ & $t = -35.60$ & $< 10^{-69}$ & $d = -3.06$ \\
+        H2: Semantic mutation & \textbf{Supported} & One-sample $t$ & $t = 9.67$ & $< 10^{-16}$ & $d = 0.83$ \\
+        H3: Topology effects & Not supported & ANOVA & $F = 0.16$ & $0.85$ & $\eta^2 = 0.003$ \\
+        H4: Complexity $\times$ persistence & Marginal & Spearman & $\rho = 0.14$ & $0.099$ & --- \\
+        H5: Detection feasible & Partial & Marker-based & --- & --- & IPR $= 0.41$ \\
+        \bottomrule
+    \end{tabular}
+    }
+\end{table}
+
+The semantic similarity metric for H1 ($0.328$, below the $0.70$ threshold) initially appears to contradict the marker-based evidence (41\% \ipr). This discrepancy arises because semantic similarity measures overlap between the \emph{raw injection text} and agent outputs, which is naturally low since agents process and recontextualize injections. The 41\% marker persistence and the significant semantic mutation (H2) together demonstrate that injections propagate in \emph{transformed} rather than verbatim form.
+
+\subsection{Injection Effectiveness Analysis}
+
+\Figref{fig:heatmap} visualizes the injection effectiveness matrix across all condition combinations. The dominant pattern is horizontal banding by injection type, confirming that injection technique is the primary axis of variation.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.75\linewidth]{figures/injection_heatmap.png}
+    \caption{Injection effectiveness heatmap showing marker persistence across all experimental conditions. Rows correspond to injection types and columns to topology--complexity combinations. The strong horizontal banding confirms that injection type dominates over topology and complexity effects.}
+    \label{fig:heatmap}
+\end{figure}
